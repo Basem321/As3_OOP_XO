@@ -7,7 +7,7 @@
 
 #include "BoardGame_Classes.h"
 #include "XO_Classes.h"
-#include "Numerical_tic_tac.h"
+#include "Numerical_tic_tac_9.h"
 
 using namespace std;
 
@@ -17,18 +17,18 @@ int main() {
     int choice;
 
     cout << "=============================================" << endl;
-    cout << "  Welcome to FCAI Board Games Center (Team XX)" << endl;
+    cout << "  Welcome to FCAI Al3ab gamda moot (Team  )" << endl;
     cout << "=============================================" << endl;
     cout << "Menu:" << endl;
     cout << "  1. Play X-O Game (Demo)" << endl;
-    cout << "  2. Play Numerical Tic-Tac-Toe (Game 9)" << endl;
+    cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
     cout << "  0. Exit" << endl;
     cout << "---------------------------------------------" << endl;
     cout << "Enter your choice: ";
     cin >> choice;
 
     if (choice == 1) {
-        cout << "\nLaunching X-O Game..." << endl;
+        cout << "\nLets play X-O Together..." << endl;
 
         UI<char>* game_ui = new XO_UI();
         Board<char>* xo_board = new X_O_Board();
@@ -45,7 +45,7 @@ int main() {
     }
 
 
-    else if (choice == 2) {
+    else if (choice == 9) {
         cout << "\nLaunching Numerical Tic-Tac-Toe..." << endl;
 
         UI<int>* game_ui = new Numerical_UI();

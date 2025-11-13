@@ -8,8 +8,8 @@
 class Numerical_Board : public Board<int> {
 private:
     set<int> used_numbers;
-    set<int> player1_numbers;
-    set<int> player2_numbers;
+    set<int> Player_Odd;
+    set<int> Player_Even;
     int blank_value = 0;
 
 public:
