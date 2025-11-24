@@ -8,6 +8,7 @@
 #include "BoardGame_Classes.h"
 #include "XO_Classes.h"
 #include "Numerical_tic_tac_9.h"
+#include "SUS_Classes.h"
 
 using namespace std;
 
@@ -21,6 +22,7 @@ int main() {
     cout << "=============================================" << endl;
     cout << "Menu:" << endl;
     cout << "  1. Play X-O Game (Demo)" << endl;
+    cout << "  2. Play SUS Game" << endl;
     cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
     cout << "  0. Exit" << endl;
     cout << "---------------------------------------------" << endl;
@@ -43,8 +45,22 @@ int main() {
         delete[] players;
         delete game_ui;
     }
+    else if (choice == 2) {
+        cout << "\nLets play SUS Game..." << endl;
 
+        UI<char>* game_ui = new SUS_UI();
+        Board<char>* sus_board = new SUS_Board();
+        Player<char>** players = game_ui->setup_players();
+        GameManager<char> sus_game(sus_board, players, game_ui);
 
+        sus_game.run();
+
+        delete sus_board;
+        delete players[0];
+        delete players[1];
+        delete[] players;
+        delete game_ui;
+    }
     else if (choice == 9) {
         cout << "\nLaunching Numerical Tic-Tac-Toe..." << endl;
 
@@ -61,7 +77,7 @@ int main() {
         delete[] players;
         delete game_ui;
     }
-    else if (choice!=0) {
+    else if (choice != 0) {
         cout << "Invalid choice. Exiting." << endl;
     }
 
