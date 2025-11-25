@@ -7,9 +7,10 @@
 
 #include "BoardGame_Classes.h"
 #include "XO_Classes.h"
-#include "Misère_Tic_Tac_Toe.h"
+#include "Misere_Tic_Tac_Toe.h"
 #include "Numerical_tic_tac_9.h"
 #include "SUS_Classes.h"
+#include "TicTacToe5x5.h"
 
 using namespace std;
 
@@ -24,7 +25,8 @@ int main() {
     cout << "Menu:" << endl;
     cout << "  1. Play X-O Game (Demo)" << endl;
     cout << "  2. Play SUS Game" << endl;
-	cout << "  5. Play Misère Tic Tac Toe" << endl;
+    cout << "  3. Play 5x5 Tic-Tac-Toe" << endl;
+    cout << "  5. Play Misere Tic Tac Toe" << endl;
     cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
     cout << "  0. Exit" << endl;
     cout << "---------------------------------------------" << endl;
@@ -63,22 +65,40 @@ int main() {
         delete[] players;
         delete game_ui;
     }
-    else if (choice == 5) {
-        cout << "\nLets play Misère Tic Tac Toe Together..." << endl;
+    else if (choice == 3) {
+        cout << "\nStarting 5x5 Tic-Tac-Toe..." << endl;
 
-        UI<char>* game_ui = new Misère_Tic_Tac_Toe_UI();
-        Board<char>* Misère_Tic_Tac_Toe_board = new Misère_Tic_Tac_Toe_Board();
+        UI<char>* game_ui = new TicTacToe5x5_UI();
+        Board<char>* board = new TicTacToe5x5();
         Player<char>** players = game_ui->setup_players();
-        GameManager<char> Misère_Tic_Tac_Toe_game(Misère_Tic_Tac_Toe_board, players, game_ui);
+        GameManager<char> game(board, players, game_ui);
 
-        Misère_Tic_Tac_Toe_game.run();
+        game.run();
 
-        delete Misère_Tic_Tac_Toe_board;
+        delete board;
         delete players[0];
         delete players[1];
         delete[] players;
         delete game_ui;
     }
+
+    else if (choice == 5) {
+        cout << "\nLets play Misere Tic Tac Toe Together..." << endl;
+
+        UI<char>* game_ui = new Misere_Tic_Tac_Toe_UI();
+        Board<char>* Misere_Tic_Tac_Toe_board = new Misere_Tic_Tac_Toe_Board();
+        Player<char>** players = game_ui->setup_players();
+        GameManager<char> Misere_Tic_Tac_Toe_game(Misere_Tic_Tac_Toe_board, players, game_ui);
+
+        Misere_Tic_Tac_Toe_game.run();
+
+        delete Misere_Tic_Tac_Toe_board;
+        delete players[0];
+        delete players[1];
+        delete[] players;
+        delete game_ui;
+    }
+
     else if (choice == 9) {
         cout << "\nLaunching Numerical Tic-Tac-Toe..." << endl;
 
