@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "D:\\New folder (4)\\Basem321\\As3_OOP_XO\\my project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B1379D88-24A9-449C-B8BC-5D868CCD8132}|my project\\my project.vcxproj|D:\\New folder (4)\\Basem321\\As3_OOP_XO\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B1379D88-24A9-449C-B8BC-5D868CCD8132}|my project\\my project.vcxproj|D:\\New folder (4)\\Basem321\\As3_OOP_XO\\TicTacToe5x5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -27,19 +30,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\New folder (4)\\Basem321\\As3_OOP_XO\\.gitignore",
+              "RelativeDocumentMoniker": "..\\.gitignore",
+              "ToolTip": "D:\\New folder (4)\\Basem321\\As3_OOP_XO\\.gitignore",
+              "RelativeToolTip": "..\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-25T14:13:35.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TicTacToe5x5.cpp",
               "DocumentMoniker": "D:\\New folder (4)\\Basem321\\As3_OOP_XO\\TicTacToe5x5.cpp",
               "RelativeDocumentMoniker": "..\\TicTacToe5x5.cpp",
               "ToolTip": "D:\\New folder (4)\\Basem321\\As3_OOP_XO\\TicTacToe5x5.cpp",
               "RelativeToolTip": "..\\TicTacToe5x5.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-25T12:54:29.292Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TicTacToe5x5.h",
               "DocumentMoniker": "D:\\New folder (4)\\Basem321\\As3_OOP_XO\\TicTacToe5x5.h",
               "RelativeDocumentMoniker": "..\\TicTacToe5x5.h",
@@ -51,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BoardGame_Classes.h",
               "DocumentMoniker": "D:\\New folder (4)\\Basem321\\As3_OOP_XO\\BoardGame_Classes.h",
               "RelativeDocumentMoniker": "..\\BoardGame_Classes.h",
@@ -63,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Main_Menu.cpp",
               "DocumentMoniker": "D:\\New folder (4)\\Basem321\\As3_OOP_XO\\Main_Menu.cpp",
               "RelativeDocumentMoniker": "..\\Main_Menu.cpp",
