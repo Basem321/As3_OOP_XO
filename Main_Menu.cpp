@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 #include <vector>
 #include <memory>
@@ -9,6 +9,7 @@
 #include "XO_Classes.h"
 #include "Numerical_tic_tac_9.h"
 #include "SUS_Classes.h"
+#include "TicTacToe5x5.h"
 
 using namespace std;
 
@@ -23,6 +24,7 @@ int main() {
     cout << "Menu:" << endl;
     cout << "  1. Play X-O Game (Demo)" << endl;
     cout << "  2. Play SUS Game" << endl;
+    cout << "  3. Play 5x5 Tic-Tac-Toe" << endl;
     cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
     cout << "  0. Exit" << endl;
     cout << "---------------------------------------------" << endl;
@@ -61,6 +63,23 @@ int main() {
         delete[] players;
         delete game_ui;
     }
+    else if (choice == 3) {
+        cout << "\nStarting 5x5 Tic-Tac-Toe..." << endl;
+
+        UI<char>* game_ui = new TicTacToe5x5_UI();
+        Board<char>* board = new TicTacToe5x5();
+        Player<char>** players = game_ui->setup_players();
+        GameManager<char> game(board, players, game_ui);
+
+        game.run();
+
+        delete board;
+        delete players[0];
+        delete players[1];
+        delete[] players;
+        delete game_ui;
+    }
+
     else if (choice == 9) {
         cout << "\nLaunching Numerical Tic-Tac-Toe..." << endl;
 

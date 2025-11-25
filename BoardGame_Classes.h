@@ -1,5 +1,7 @@
+
 #ifndef _BOARDGAME_CLASSES_H
 #define _BOARDGAME_CLASSES_H
+
 
 #include <string>
 #include <vector>
@@ -220,6 +222,10 @@ public:
      * @brief Display the current board matrix in formatted form.
      */
     void display_board_matrix(const vector<vector<T>>& matrix) const {
+        //Improving Ui
+        system("cls");
+
+
         if (matrix.empty() || matrix[0].empty()) return;
 
         int rows = matrix.size();
@@ -317,5 +323,5 @@ Player<T>** UI<T>::setup_players() {
 
     return players;
 }
-
+ // _BOARDGAME_CLASSES_H
 #endif // _BOARDGAME_CLASSES_H
