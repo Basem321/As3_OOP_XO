@@ -7,6 +7,7 @@
 
 #include "BoardGame_Classes.h"
 #include "XO_Classes.h"
+#include "Misère_Tic_Tac_Toe.h"
 #include "Numerical_tic_tac_9.h"
 #include "SUS_Classes.h"
 
@@ -23,6 +24,7 @@ int main() {
     cout << "Menu:" << endl;
     cout << "  1. Play X-O Game (Demo)" << endl;
     cout << "  2. Play SUS Game" << endl;
+	cout << "  5. Play Misère Tic Tac Toe" << endl;
     cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
     cout << "  0. Exit" << endl;
     cout << "---------------------------------------------" << endl;
@@ -56,6 +58,22 @@ int main() {
         sus_game.run();
 
         delete sus_board;
+        delete players[0];
+        delete players[1];
+        delete[] players;
+        delete game_ui;
+    }
+    else if (choice == 5) {
+        cout << "\nLets play Misère Tic Tac Toe Together..." << endl;
+
+        UI<char>* game_ui = new Misère_Tic_Tac_Toe_UI();
+        Board<char>* Misère_Tic_Tac_Toe_board = new Misère_Tic_Tac_Toe_Board();
+        Player<char>** players = game_ui->setup_players();
+        GameManager<char> Misère_Tic_Tac_Toe_game(Misère_Tic_Tac_Toe_board, players, game_ui);
+
+        Misère_Tic_Tac_Toe_game.run();
+
+        delete Misère_Tic_Tac_Toe_board;
         delete players[0];
         delete players[1];
         delete[] players;
