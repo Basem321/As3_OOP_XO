@@ -11,6 +11,7 @@
 #include "Numerical_tic_tac_9.h"
 #include "SUS_Classes.h"
 #include "TicTacToe5x5.h"
+#include "Infinity_TicTacToe.h"
 
 using namespace std;
 
@@ -28,6 +29,7 @@ int main() {
     cout << "  3. Play 5x5 Tic-Tac-Toe" << endl;
     cout << "  5. Play Misere Tic Tac Toe" << endl;
     cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
+    cout << " 11. Play Infinity Tic-Tac-Toe" << endl;
     cout << "  0. Exit" << endl;
     cout << "---------------------------------------------" << endl;
     cout << "Enter your choice: ";
@@ -81,7 +83,6 @@ int main() {
         delete[] players;
         delete game_ui;
     }
-
     else if (choice == 5) {
         cout << "\nLets play Misere Tic Tac Toe Together..." << endl;
 
@@ -98,7 +99,6 @@ int main() {
         delete[] players;
         delete game_ui;
     }
-
     else if (choice == 9) {
         cout << "\nLaunching Numerical Tic-Tac-Toe..." << endl;
 
@@ -110,6 +110,22 @@ int main() {
         num_game.run();
 
         delete num_board;
+        delete players[0];
+        delete players[1];
+        delete[] players;
+        delete game_ui;
+    }
+    else if (choice == 11) {
+        cout << "\nLaunching Infinity Tic-Tac-Toe..." << endl;
+
+        UI<char>* game_ui = new Infinity_UI();
+        Board<char>* infinity_board = new Infinity_Board();
+        Player<char>** players = game_ui->setup_players();
+        GameManager<char> infinity_game(infinity_board, players, game_ui);
+
+        infinity_game.run();
+
+        delete infinity_board;
         delete players[0];
         delete players[1];
         delete[] players;

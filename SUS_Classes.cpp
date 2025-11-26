@@ -51,7 +51,7 @@ bool SUS_Board::update_board(Move<char>* move) {
         // Check Vertical
         if (isValid(r - 1, c) && isValid(r + 1, c) && board[r - 1][c] == 'S' && board[r + 1][c] == 'S') 
             points++;
-        // Check main diagonal like this \  (''_'')
+        // Check main diagonal like this \  (''_'') 
         if (isValid(r - 1, c - 1) && isValid(r + 1, c + 1) && board[r - 1][c - 1] == 'S' && board[r + 1][c + 1] == 'S') 
             points++;
         // Check anti diagonal like this /
