@@ -45,16 +45,16 @@ bool SUS_Board::update_board(Move<char>* move) {
     }
     else if (symbol == 'U') {
 
-        // Check Horizontal
+
         if (isValid(r, c - 1) && isValid(r, c + 1) && board[r][c - 1] == 'S' && board[r][c + 1] == 'S') 
             points++;
-        // Check Vertical
+
         if (isValid(r - 1, c) && isValid(r + 1, c) && board[r - 1][c] == 'S' && board[r + 1][c] == 'S') 
             points++;
-        // Check main diagonal like this \  (''_'') 
+
         if (isValid(r - 1, c - 1) && isValid(r + 1, c + 1) && board[r - 1][c - 1] == 'S' && board[r + 1][c + 1] == 'S') 
             points++;
-        // Check anti diagonal like this /
+
         if (isValid(r - 1, c + 1) && isValid(r + 1, c - 1) && board[r - 1][c + 1] == 'S' && board[r + 1][c - 1] == 'S') 
             points++;
     }

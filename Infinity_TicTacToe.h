@@ -9,8 +9,8 @@ using namespace std;
 class Infinity_Board : public Board<char> {
 private:
     char blank_symbol = '.';
-    queue<pair<int, int>> player_x_moves;
-    queue<pair<int, int>> player_o_moves;
+	queue<pair<int, int>> player_x_moves; //  i used queue to delete the oldest move FIFO (-+ _ -+) 
+	queue<pair<int, int>> player_o_moves; // and for the pair to store the coordinates of the moves for the oldest move also it seems wired but it works
     int x_move_count = 0;
     int o_move_count = 0;
 

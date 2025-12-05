@@ -12,6 +12,7 @@
 #include "SUS_Classes.h"
 #include "TicTacToe5x5.h"
 #include "Infinity_TicTacToe.h"
+#include "FourInARow.h"  // New game
 
 using namespace std;
 
@@ -27,6 +28,7 @@ int main() {
     cout << "  1. Play X-O Game (Demo)" << endl;
     cout << "  2. Play SUS Game" << endl;
     cout << "  3. Play 5x5 Tic-Tac-Toe" << endl;
+    cout << "  4. Play Four-in-a-Row (Connect Four)" << endl;  // New game
     cout << "  5. Play Misere Tic Tac Toe" << endl;
     cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
     cout << " 11. Play Infinity Tic-Tac-Toe" << endl;
@@ -72,6 +74,22 @@ int main() {
 
         UI<char>* game_ui = new TicTacToe5x5_UI();
         Board<char>* board = new TicTacToe5x5();
+        Player<char>** players = game_ui->setup_players();
+        GameManager<char> game(board, players, game_ui);
+
+        game.run();
+
+        delete board;
+        delete players[0];
+        delete players[1];
+        delete[] players;
+        delete game_ui;
+    }
+    else if (choice == 4) {
+        cout << "\nStarting Four-in-a-Row (Connect Four)..." << endl;
+
+        UI<char>* game_ui = new FourInARow_UI();
+        Board<char>* board = new FourInARow_Board();
         Player<char>** players = game_ui->setup_players();
         GameManager<char> game(board, players, game_ui);
 

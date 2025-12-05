@@ -38,7 +38,7 @@ bool Infinity_Board::update_board(Move<char>* move) {
         }
     }
     else if (mark == 'O') {
-        player_o_moves.push({ x, y });
+        player_o_moves.push({ x, y }); 
         o_move_count++;
 
         if (o_move_count > 3) {
