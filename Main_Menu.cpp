@@ -14,6 +14,7 @@
 #include "Infinity_TicTacToe.h"
 #include "FourInARow.h"  // New game
 #include "WordTicTacToe.h"
+#include "Diamond_Tic_Tac_Toe.h"
 
 using namespace std;
 
@@ -32,6 +33,7 @@ int main() {
     cout << "  3. Play 5x5 Tic-Tac-Toe" << endl;
     cout << "  4. Play Word Tic-Tac-Toe" << endl;
     cout << "  5. Play Misere Tic Tac Toe" << endl;
+    cout << "  6. Play Diamond Tic Tac Toe" << endl;
     cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
     cout << " 11. Play Infinity Tic-Tac-Toe" << endl;
     cout << "  0. Exit" << endl;
@@ -131,6 +133,22 @@ int main() {
         Misere_Tic_Tac_Toe_game.run();
 
         delete Misere_Tic_Tac_Toe_board;
+        delete players[0];
+        delete players[1];
+        delete[] players;
+        delete game_ui;
+    }
+    else if (choice == 6) {
+        cout << "\nLets play Diamond Tic Tac Toe Together..." << endl;
+
+        UI<char>* game_ui = new Diamond_Tic_Tac_Toe_UI();
+        Board<char>* Diamond_Tic_Tac_Toe_board = new Diamond_Tic_Tac_Toe_Board();
+        Player<char>** players = game_ui->setup_players();
+        GameManager<char> Diamond_Tic_Tac_Toe_game(Diamond_Tic_Tac_Toe_board, players, game_ui);
+
+        Diamond_Tic_Tac_Toe_game.run();
+
+        delete Diamond_Tic_Tac_Toe_board;
         delete players[0];
         delete players[1];
         delete[] players;
