@@ -13,6 +13,7 @@
 #include "TicTacToe5x5.h"
 #include "Infinity_TicTacToe.h"
 #include "FourInARow.h"  // New game
+#include "WordTicTacToe.h"
 
 using namespace std;
 
@@ -25,10 +26,11 @@ int main() {
     cout << "  Welcome to FCAI Al3ab gamda moot (Team  )" << endl;
     cout << "=============================================" << endl;
     cout << "Menu:" << endl;
-    cout << "  1. Play X-O Game (Demo)" << endl;
+    cout << "  0. Play X-O Game (Demo)" << endl;
+    cout << "  1. Play Four-in-a-Row (Connect Four)" << endl;  // New game
     cout << "  2. Play SUS Game" << endl;
     cout << "  3. Play 5x5 Tic-Tac-Toe" << endl;
-    cout << "  4. Play Four-in-a-Row (Connect Four)" << endl;  // New game
+    cout << "  4. Play Word Tic-Tac-Toe" << endl;
     cout << "  5. Play Misere Tic Tac Toe" << endl;
     cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
     cout << " 11. Play Infinity Tic-Tac-Toe" << endl;
@@ -37,7 +39,7 @@ int main() {
     cout << "Enter your choice: ";
     cin >> choice;
 
-    if (choice == 1) {
+    if (choice == 0) {
         cout << "\nLets play X-O Together..." << endl;
 
         UI<char>* game_ui = new XO_UI();
@@ -53,7 +55,7 @@ int main() {
         delete[] players;
         delete game_ui;
     }
-    else if (choice == 2) {
+    else if (choice == 1) {
         cout << "\nLets play SUS Game..." << endl;
 
         UI<char>* game_ui = new SUS_UI();
@@ -69,7 +71,23 @@ int main() {
         delete[] players;
         delete game_ui;
     }
-    else if (choice == 3) {
+    else if (choice == 2) {
+        cout << "\nStarting Four-in-a-Row (Connect Four)..." << endl;
+
+        UI<char>* game_ui = new FourInARow_UI();
+        Board<char>* board = new FourInARow_Board();
+        Player<char>** players = game_ui->setup_players();
+        GameManager<char> game(board, players, game_ui);
+
+        game.run();
+
+        delete board;
+        delete players[0];
+        delete players[1];
+        delete[] players;
+        delete game_ui;
+    }
+    else if (choice ==3 ) {
         cout << "\nStarting 5x5 Tic-Tac-Toe..." << endl;
 
         UI<char>* game_ui = new TicTacToe5x5_UI();
@@ -85,17 +103,18 @@ int main() {
         delete[] players;
         delete game_ui;
     }
-    else if (choice == 4) {
-        cout << "\nStarting Four-in-a-Row (Connect Four)..." << endl;
+    else if (choice == 4) { 
+        cout << "\nStarting Word Tic-Tac-Toe..." << endl;
 
-        UI<char>* game_ui = new FourInARow_UI();
-        Board<char>* board = new FourInARow_Board();
+        UI<char>* game_ui = new WordTicTacToe_UI();
+        Board<char>* word_board = new WordTicTacToe_Board();
         Player<char>** players = game_ui->setup_players();
-        GameManager<char> game(board, players, game_ui);
+        GameManager<char> word_game(word_board, players, game_ui);
 
-        game.run();
+        word_game.run();
 
-        delete board;
+        
+        delete word_board;
         delete players[0];
         delete players[1];
         delete[] players;
