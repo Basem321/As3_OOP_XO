@@ -8,13 +8,13 @@
 
 
 WordTicTacToe_Board::WordTicTacToe_Board() : Board<char>(3, 3) {
-    
+
     load_dic("dic.txt");
 }
 
 void WordTicTacToe_Board::load_dic(const string& filename)
 {
- 
+
     ifstream file(filename);
     string word;
 
@@ -25,7 +25,7 @@ void WordTicTacToe_Board::load_dic(const string& filename)
     }
 
     while (file >> word) {
-       
+
         transform(word.begin(), word.end(), word.begin(), ::toupper);
         dic.insert(word);
     }
@@ -39,7 +39,7 @@ bool WordTicTacToe_Board::update_board(Move<char>* move) {
     int y = move->get_y();
     char mark = toupper(move->get_symbol());
 
-   
+
     if (!(x < 0 || x >= rows || y < 0 || y >= columns) &&
         (board[x][y] == blank_symbol)) {
 
@@ -52,7 +52,7 @@ bool WordTicTacToe_Board::update_board(Move<char>* move) {
 
 
 bool WordTicTacToe_Board::is_win(Player<char>* player) {
-   
+
     if (n_moves < 3) return false;
 
     for (int i = 0; i < rows; ++i) {
@@ -65,7 +65,7 @@ bool WordTicTacToe_Board::is_win(Player<char>* player) {
         }
     }
 
-   
+
     for (int j = 0; j < columns; ++j) {
         if (board[0][j] != blank_symbol && board[1][j] != blank_symbol && board[2][j] != blank_symbol) {
             string word = "";
@@ -76,7 +76,7 @@ bool WordTicTacToe_Board::is_win(Player<char>* player) {
         }
     }
 
-    
+
     if (board[0][0] != blank_symbol && board[1][1] != blank_symbol && board[2][2] != blank_symbol) {
         string word = "";
         word += board[0][0];
@@ -85,7 +85,7 @@ bool WordTicTacToe_Board::is_win(Player<char>* player) {
         if (dic.count(word)) return true;
     }
 
-    
+
     if (board[0][2] != blank_symbol && board[1][1] != blank_symbol && board[2][0] != blank_symbol) {
         string word = "";
         word += board[0][2];
@@ -98,12 +98,12 @@ bool WordTicTacToe_Board::is_win(Player<char>* player) {
 }
 
 bool WordTicTacToe_Board::is_draw(Player<char>* player) {
-   
+
     return (n_moves == 9 && !is_win(player));
 }
 
 bool WordTicTacToe_Board::game_is_over(Player<char>* player) {
-   
+
     return is_win(player) || (n_moves == 9);
 }
 
@@ -124,7 +124,7 @@ Move<char>* WordTicTacToe_UI::get_move(Player<char>* player) {
     if (player->get_type() == PlayerType::HUMAN) {
         cout << player->get_name() << " (" << player->get_symbol() << " turn), enter letter: ";
         cin >> letter;
-        
+
         while (cin.fail() || !isalpha(letter)) {
             cin.clear();
             cin.ignore(1000, '\n');
@@ -134,7 +134,7 @@ Move<char>* WordTicTacToe_UI::get_move(Player<char>* player) {
 
         cout << "Enter position (row col 0-2): ";
         cin >> x >> y;
-        
+
         while (cin.fail()) {
             cin.clear();
             cin.ignore(1000, '\n');
@@ -142,15 +142,56 @@ Move<char>* WordTicTacToe_UI::get_move(Player<char>* player) {
             cin >> x >> y;
         }
     }
-    else { 
+    else {
         
-        letter = 'A' + (rand() % 26);
+
+        WordTicTacToe_Board* current_board = (WordTicTacToe_Board*)player->get_board_ptr();
+        int best_x = -1, best_y = -1;
+        char best_letter = 0;
+        bool found_move = false;
 
         
-        do {
-            x = rand() % 3;
-            y = rand() % 3;
-        } while (player->get_board_ptr()->get_board_matrix()[x][y] != 0);
+        for (int i = 0; i < 3; ++i) {
+            for (int j = 0; j < 3; ++j) {
+                if (current_board->get_board_matrix()[i][j] == 0) {
+                    
+                    for (char c = 'A'; c <= 'Z'; ++c) {
+                        
+                        WordTicTacToe_Board temp_board = *current_board;
+                        Move<char> temp_move(i, j, c);
+                        
+                        temp_board.update_board(&temp_move);
+
+                        
+                        if (temp_board.is_win(player)) {
+                            best_x = i;
+                            best_y = j;
+                            best_letter = c;
+                            found_move = true;
+                            break; 
+                        }
+                    }
+                }
+                if (found_move) break; 
+            }
+            if (found_move) break; 
+        }
+
+        
+        if (found_move) {
+            x = best_x;
+            y = best_y;
+            letter = best_letter;
+        }
+        else {
+            
+            letter = 'A' + (rand() % 26);
+            
+            do {
+                x = rand() % 3;
+                y = rand() % 3;
+            } while (current_board->get_board_matrix()[x][y] != 0);
+        }
 
         cout << "Computer " << player->get_name() << " places '" << letter
             << "' at (" << x << ", " << y << ")\n";

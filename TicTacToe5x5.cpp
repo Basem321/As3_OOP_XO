@@ -1,10 +1,10 @@
-#include "TicTacToe5x5.h"
+﻿#include "TicTacToe5x5.h"
 #include <iostream>
 
 // --- Board Implementation --- //
 
 TicTacToe5x5::TicTacToe5x5() : Board<char>(5, 5) {
-    n_moves = 0; 
+    n_moves = 0;
 }
 
 
@@ -12,12 +12,12 @@ bool TicTacToe5x5::update_board(Move<char>* move) {
     int x = move->get_x();
     int y = move->get_y();
 
-    
+
     if (x < 0 || x >= 5 || y < 0 || y >= 5 || board[x][y] != 0) {
         return false;
     }
 
-   
+
     board[x][y] = move->get_symbol();
     n_moves++;
 
@@ -27,18 +27,18 @@ bool TicTacToe5x5::update_board(Move<char>* move) {
 
 int TicTacToe5x5::count_three_in_a_row(char symbol) {
     int count = 0;
-    
+
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
-            
+
             if (j + 2 < 5 && board[i][j] == symbol && board[i][j + 1] == symbol && board[i][j + 2] == symbol)
                 count++;
 
-           
+
             if (i + 2 < 5 && board[i][j] == symbol && board[i + 1][j] == symbol && board[i + 2][j] == symbol)
                 count++;
 
-            
+
             if (i + 2 < 5 && j + 2 < 5 && board[i][j] == symbol && board[i + 1][j + 1] == symbol && board[i + 2][j + 2] == symbol)
                 count++;
 
@@ -56,10 +56,10 @@ bool TicTacToe5x5::game_is_over(Player<char>* player) {
 
 
 bool TicTacToe5x5::is_win(Player<char>* player) {
-    if (n_moves < 24) return false; 
+    if (n_moves < 24) return false;
 
     char my_symbol = player->get_symbol();
-    char opp_symbol = (my_symbol == 'X') ? 'O' : 'X'; 
+    char opp_symbol = (my_symbol == 'X') ? 'O' : 'X';
 
     int my_score = count_three_in_a_row(my_symbol);
     int opp_score = count_three_in_a_row(opp_symbol);
@@ -102,11 +102,41 @@ Move<char>* TicTacToe5x5_UI::get_move(Player<char>* player) {
     }
     else {
         
-        TicTacToe5x5* board = (TicTacToe5x5*)player->get_board_ptr();
-        do {
-            x = rand() % 5;
-            y = rand() % 5;
-        } while (board->get_board_matrix()[x][y] != 0); 
+
+        TicTacToe5x5* current_board = (TicTacToe5x5*)player->get_board_ptr();
+        int best_score = -1; 
+        int best_x = -1, best_y = -1; 
+
+        for (int i = 0; i < 5; ++i) {
+            for (int j = 0; j < 5; ++j) {
+                if (current_board->get_board_matrix()[i][j] == 0) {
+
+                    TicTacToe5x5 temp_board = *current_board;
+                    Move<char> temp_move(i, j, player->get_symbol());
+                    temp_board.update_board(&temp_move);
+
+                    int score = temp_board.count_three_in_a_row(player->get_symbol());
+
+                    if (score > best_score) {
+                        best_score = score;
+                        best_x = i;
+                        best_y = j;
+                    }
+                }
+            }
+        }
+
+        if (best_x != -1) {
+            x = best_x;
+            y = best_y;
+        }
+        else {
+            
+            do {
+                x = rand() % 5;
+                y = rand() % 5;
+            } while (current_board->get_board_matrix()[x][y] != 0);
+        }
     }
     return new Move<char>(x, y, player->get_symbol());
 }
