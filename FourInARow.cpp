@@ -103,7 +103,7 @@ bool FourInARow_Board::game_is_over(Player<char>* player) {
 
 FourInARow_UI::FourInARow_UI()
     : UI<char>("Welcome to FCAI Four-in-a-Row (Connect Four) Game!", 3) {
-    cout << "\n=== This is Basem's game ===" << endl;
+    cout << "\n=== This is Basem's gamecc ===" << endl;
     cout << "\n=== Game Rules ===" << endl;
     cout << "- This is a 6x7 grid game" << endl;
     cout << "- Players take turns choosing a column (0-6)" << endl;
