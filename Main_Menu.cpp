@@ -16,6 +16,7 @@
 #include "WordTicTacToe.h"
 #include "Diamond_Tic_Tac_Toe.h"
 #include "UltimateTicTacToe.h"
+#include "Obstacles_Tic_Tac_Toe.h"
 
 using namespace std;
 
@@ -36,6 +37,7 @@ int main() {
     cout << "  5. Play Misere Tic Tac Toe" << endl;
     cout << "  6. Play Diamond Tic Tac Toe" << endl;
     cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
+    cout << " 10. Play Obstacles Tic-Tac-Toe" << endl;
     cout << " 11. Play Infinity Tic-Tac-Toe" << endl;
     cout << " 12. Play Ultimate Tic-Tac-Toe" << endl;
     cout << "  0. Exit" << endl;
@@ -172,6 +174,22 @@ int main() {
         delete[] players;
         delete game_ui;
     }
+    else if (choice == 10) {
+        cout << "\nLets play Obstacles Tic Tac Toe Together..." << endl;
+
+        UI<char>* game_ui = new Obstacles_Tic_Tac_Toe_UI();
+        Board<char>* Obstacles_Tic_Tac_Toe_board = new Obstacles_Tic_Tac_Toe_Board();
+        Player<char>** players = game_ui->setup_players();
+        GameManager<char> Obstacles_Tic_Tac_Toe_game(Obstacles_Tic_Tac_Toe_board, players, game_ui);
+
+        Obstacles_Tic_Tac_Toe_game.run();
+
+        delete Obstacles_Tic_Tac_Toe_board;
+        delete players[0];
+        delete players[1];
+        delete[] players;
+        delete game_ui;
+        }
     else if (choice == 11) {
         cout << "\nLaunching Infinity Tic-Tac-Toe..." << endl;
 
