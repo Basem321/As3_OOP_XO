@@ -130,6 +130,7 @@
 #include "Diamond_Tic_Tac_Toe.h"
 #include "UltimateTicTacToe.h"
 #include "Obstacles_Tic_Tac_Toe.h"
+#include "MemoryTTT_Classes.h"
 
 using namespace std;
 
@@ -216,6 +217,7 @@ int main() {
     cout << " 10. Play Obstacles Tic-Tac-Toe" << endl;
     cout << " 11. Play Infinity Tic-Tac-Toe" << endl;
     cout << " 12. Play Ultimate Tic-Tac-Toe" << endl;
+    cout << " 13. Play Memory_Tic_Tac_Toe" << endl;
     cout << "  0. Exit" << endl;
     cout << "---------------------------------------------" << endl;
     cout << "Enter your choice: ";
@@ -410,6 +412,22 @@ int main() {
         delete[] players;
         delete game_ui;
     }
+    else if (choice == 13) {
+        cout << "\nLets play Memory Tic Tac Toe Together..." << endl;
+
+        UI<char>* game_ui = new MemoryTTT_UI();
+        Board<char>* memory_board = new MemoryTTT_Board();
+        Player<char>** players = game_ui->setup_players();
+        GameManager<char> memory_game(memory_board, players, game_ui);
+
+        memory_game.run();
+
+        delete memory_board;
+        delete players[0];
+        delete players[1];
+        delete[] players;
+        delete game_ui;
+        }
     else if (choice != 0) {
         cout << "Invalid choice. Exiting." << endl;
     }
