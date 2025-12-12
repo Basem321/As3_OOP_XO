@@ -1,0 +1,277 @@
+\doxysection{Tic\+Tac\+Toe5x5 Class Reference}
+\hypertarget{class_tic_tac_toe5x5}{}\label{class_tic_tac_toe5x5}\index{TicTacToe5x5@{TicTacToe5x5}}
+
+
+Represents a 5×5 Tic-\/\+Tac-\/\+Toe board with counting victory.  
+
+
+
+
+{\ttfamily \#include $<$Tic\+Tac\+Toe5x5.\+h$>$}
+
+Inheritance diagram for Tic\+Tac\+Toe5x5\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tic_tac_toe5x5}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tic_tac_toe5x5_ae396ce1b86071aa5fc8841ba36440a45}{Tic\+Tac\+Toe5x5}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a 5×5 board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tic_tac_toe5x5_a37b39c0f4c294782fdd5a9e89dc6785f}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Updates board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tic_tac_toe5x5_a3286b74a7ebec7f28415f59afffa131c}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if player has won (more three-\/in-\/a-\/rows). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tic_tac_toe5x5_a2c81f088264324b731caa7853cf37cac}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if player has lost (fewer three-\/in-\/a-\/rows). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tic_tac_toe5x5_ab369e98b7bb05ed5510bf33fa0e8bb91}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if game is a draw (equal three-\/in-\/a-\/rows). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tic_tac_toe5x5_aaf4397c5133697ba59febb08a169bc5d}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if game has ended. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tic_tac_toe5x5_a669b73c9871a5f5b690171d370d6aba3}{count\+\_\+three\+\_\+in\+\_\+a\+\_\+row}} (char symbol)
+\begin{DoxyCompactList}\small\item\em Counts total three-\/in-\/a-\/row patterns for a symbol. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+n\+\_\+moves} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 5×5 Tic-\/\+Tac-\/\+Toe board with counting victory. 
+
+Unlike traditional Tic-\/\+Tac-\/\+Toe, this variant\+:
+\begin{DoxyItemize}
+\item Uses a 5×5 grid (25 cells total)
+\item Game runs for exactly 24 moves (leaving 1 empty cell)
+\item Players can create multiple three-\/in-\/a-\/row patterns
+\item Winner is determined by counting total three-\/in-\/a-\/rows
+\end{DoxyItemize}
+
+Counting rules\+:
+\begin{DoxyItemize}
+\item Each unique sequence of 3 matching symbols counts as 1 point
+\item Sequences checked in all directions\+: →, ↓, ↘, ↙
+\item Overlapping patterns both count (e.\+g., XXXX has 2 patterns)
+\end{DoxyItemize}
+
+Example scoring\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{X\ X\ X\ .\ .\ \ \ ←\ This\ row\ has\ 1\ three-\/in-\/a-\/row}
+\DoxyCodeLine{X\ X\ X\ X\ .\ \ \ ←\ This\ row\ has\ 2\ three-\/in-\/a-\/\mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ (positions\ 0-\/2\ and\ 1-\/3)}
+
+\end{DoxyCode}
+
+
+Game phases\+:
+\begin{DoxyEnumerate}
+\item Placement phase\+: Players alternate placing pieces (moves 1-\/24)
+\item Scoring phase\+: Count all three-\/in-\/a-\/rows for each player
+\item Victory\+: \doxylink{class_player}{Player} with more patterns wins
+\end{DoxyEnumerate}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_tic_tac_toe5x5_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tic_tac_toe5x5_ae396ce1b86071aa5fc8841ba36440a45}\index{TicTacToe5x5@{TicTacToe5x5}!TicTacToe5x5@{TicTacToe5x5}}
+\index{TicTacToe5x5@{TicTacToe5x5}!TicTacToe5x5@{TicTacToe5x5}}
+\doxysubsubsection{\texorpdfstring{TicTacToe5x5()}{TicTacToe5x5()}}
+{\footnotesize\ttfamily \label{class_tic_tac_toe5x5_ae396ce1b86071aa5fc8841ba36440a45} 
+Tic\+Tac\+Toe5x5\+::\+Tic\+Tac\+Toe5x5 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a 5×5 board. 
+
+Initializes empty 5×5 grid with move counter at 0. 
+
+\label{doc-func-members}
+\Hypertarget{class_tic_tac_toe5x5_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tic_tac_toe5x5_a669b73c9871a5f5b690171d370d6aba3}\index{TicTacToe5x5@{TicTacToe5x5}!count\_three\_in\_a\_row@{count\_three\_in\_a\_row}}
+\index{count\_three\_in\_a\_row@{count\_three\_in\_a\_row}!TicTacToe5x5@{TicTacToe5x5}}
+\doxysubsubsection{\texorpdfstring{count\_three\_in\_a\_row()}{count\_three\_in\_a\_row()}}
+{\footnotesize\ttfamily \label{class_tic_tac_toe5x5_a669b73c9871a5f5b690171d370d6aba3} 
+int Tic\+Tac\+Toe5x5\+::count\+\_\+three\+\_\+in\+\_\+a\+\_\+row (\begin{DoxyParamCaption}\item[{char}]{symbol}{}\end{DoxyParamCaption})}
+
+
+
+Counts total three-\/in-\/a-\/row patterns for a symbol. 
+
+Scans entire board in all 4 directions\+:
+\begin{DoxyItemize}
+\item Horizontal (→)
+\item Vertical (↓)
+\item Diagonal down-\/right (↘)
+\item Diagonal down-\/left (↙)
+\end{DoxyItemize}
+
+For each starting position, checks if there are 3 consecutive matching symbols. Overlapping patterns are counted separately.
+
+Example\+: "{}\+XXXX"{} contains 2 patterns\+: X\mbox{[}XXX\mbox{]} and \mbox{[}XXX\mbox{]}X
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol to count (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Total number of three-\/in-\/a-\/row patterns found 
+\end{DoxyReturn}
+\Hypertarget{class_tic_tac_toe5x5_aaf4397c5133697ba59febb08a169bc5d}\index{TicTacToe5x5@{TicTacToe5x5}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!TicTacToe5x5@{TicTacToe5x5}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_tic_tac_toe5x5_aaf4397c5133697ba59febb08a169bc5d} 
+bool Tic\+Tac\+Toe5x5\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if game has ended. 
+
+Game ends after exactly 24 moves (board nearly full).
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if 24 moves completed, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_tic_tac_toe5x5_ab369e98b7bb05ed5510bf33fa0e8bb91}\index{TicTacToe5x5@{TicTacToe5x5}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!TicTacToe5x5@{TicTacToe5x5}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_tic_tac_toe5x5_ab369e98b7bb05ed5510bf33fa0e8bb91} 
+bool Tic\+Tac\+Toe5x5\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if game is a draw (equal three-\/in-\/a-\/rows). 
+
+Only evaluated after 24 moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if 24 moves done with equal pattern counts, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_tic_tac_toe5x5_a2c81f088264324b731caa7853cf37cac}\index{TicTacToe5x5@{TicTacToe5x5}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!TicTacToe5x5@{TicTacToe5x5}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_tic_tac_toe5x5_a2c81f088264324b731caa7853cf37cac} 
+bool Tic\+Tac\+Toe5x5\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if player has lost (fewer three-\/in-\/a-\/rows). 
+
+Only evaluated after 24 moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if 24 moves done and player has fewer patterns, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_tic_tac_toe5x5_a3286b74a7ebec7f28415f59afffa131c}\index{TicTacToe5x5@{TicTacToe5x5}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!TicTacToe5x5@{TicTacToe5x5}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_tic_tac_toe5x5_a3286b74a7ebec7f28415f59afffa131c} 
+bool Tic\+Tac\+Toe5x5\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if player has won (more three-\/in-\/a-\/rows). 
+
+Only evaluated after 24 moves. Counts all three-\/in-\/a-\/row patterns for both players and compares.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if 24 moves done and player has more patterns, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_tic_tac_toe5x5_a37b39c0f4c294782fdd5a9e89dc6785f}\index{TicTacToe5x5@{TicTacToe5x5}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!TicTacToe5x5@{TicTacToe5x5}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_tic_tac_toe5x5_a37b39c0f4c294782fdd5a9e89dc6785f} 
+bool Tic\+Tac\+Toe5x5\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates board with a player\textquotesingle{}s move. 
+
+Validates position is in bounds (0-\/4, 0-\/4) and empty before placing the piece.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move} with position and symbol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move valid and placed, false if position invalid/occupied 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_tic_tac_toe5x5_8h}{Tic\+Tac\+Toe5x5.\+h}}\item 
+Tic\+Tac\+Toe5x5.\+cpp\end{DoxyCompactItemize}

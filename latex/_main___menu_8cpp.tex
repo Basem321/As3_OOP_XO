@@ -1,0 +1,141 @@
+\doxysection{Main\+\_\+\+Menu.\+cpp File Reference}
+\hypertarget{_main___menu_8cpp}{}\label{_main___menu_8cpp}\index{Main\_Menu.cpp@{Main\_Menu.cpp}}
+
+
+Main entry point for the \doxylink{class_board}{Board} Game Collection.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include "{}Board\+Game\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \#include "{}XO\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \#include "{}Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h"{}}\newline
+{\ttfamily \#include "{}Numerical\+\_\+tic\+\_\+tac\+\_\+9.\+h"{}}\newline
+{\ttfamily \#include "{}SUS\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \#include "{}Tic\+Tac\+Toe5x5.\+h"{}}\newline
+{\ttfamily \#include "{}Infinity\+\_\+\+Tic\+Tac\+Toe.\+h"{}}\newline
+{\ttfamily \#include "{}Four\+In\+ARow.\+h"{}}\newline
+{\ttfamily \#include "{}Word\+Tic\+Tac\+Toe.\+h"{}}\newline
+{\ttfamily \#include "{}Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h"{}}\newline
+{\ttfamily \#include "{}Ultimate\+Tic\+Tac\+Toe.\+h"{}}\newline
+{\ttfamily \#include "{}Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h"{}}\newline
+{\ttfamily \#include "{}Memory\+TTT\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \#include "{}Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+4x4.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_main___menu_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function providing game selection menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main entry point for the \doxylink{class_board}{Board} Game Collection. 
+
+This file provides a menu-\/driven interface for selecting and playing various Tic-\/\+Tac-\/\+Toe variants and Connect Four. It handles game initialization, player setup, game execution, and cleanup for all supported game types.
+
+\begin{DoxyAuthor}{Author}
+FCAI \doxylink{class_board}{Board} Game Team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\label{doc-func-members}
+\Hypertarget{_main___menu_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_main___menu_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{Main\_Menu.cpp@{Main\_Menu.cpp}!main@{main}}
+\index{main@{main}!Main\_Menu.cpp@{Main\_Menu.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_main___menu_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Main function providing game selection menu. 
+
+Displays a menu of available games, handles user selection, initializes the chosen game with appropriate board and \doxylink{class_u_i}{UI} classes, runs the game to completion, and performs cleanup.
+
+Menu options (0-\/12)\+:
+\begin{DoxyItemize}
+\item 0\+: Exit program
+\item 1\+: Four-\/in-\/a-\/\+Row (Connect Four)
+\item 2\+: SUS Game
+\item 3\+: 5×5 Tic-\/\+Tac-\/\+Toe
+\item 4\+: Word Tic-\/\+Tac-\/\+Toe
+\item 5\+: Misère Tic-\/\+Tac-\/\+Toe
+\item 6\+: Diamond Tic-\/\+Tac-\/\+Toe
+\item 7\+: 4x4 Tic-\/\+Tac-\/\+Toe
+\item 8\+: Prymaid Tic-\/\+Tac-\/\+Toe
+\item 9\+: Numerical Tic-\/\+Tac-\/\+Toe
+\item 10\+: Obstacles Tic-\/\+Tac-\/\+Toe
+\item 11\+: Infinity Tic-\/\+Tac-\/\+Toe
+\item 12\+: Ultimate Tic-\/\+Tac-\/\+Toe
+\end{DoxyItemize}
+
+Game lifecycle for each selection\+:
+\begin{DoxyEnumerate}
+\item Create \doxylink{class_u_i}{UI} object
+\item Create \doxylink{class_board}{Board} object
+\item Setup players via \doxylink{class_u_i}{UI}
+\item Create \doxylink{class_game_manager}{Game\+Manager}
+\item Run game
+\item Delete all dynamically allocated objects
+\end{DoxyEnumerate}
+
+Memory management\+:
+\begin{DoxyItemize}
+\item All dynamically allocated objects are properly deleted
+\item \doxylink{class_player}{Player} array and individual players cleaned up after each game
+\item \doxylink{class_board}{Board} and \doxylink{class_u_i}{UI} objects deleted before exit
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+0 on successful execution
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Seeds random number generator at startup for computer players 
+
+Invalid menu choices display error message and exit
+\end{DoxyNote}
+Example usage flow\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ User\ runs\ program}}
+\DoxyCodeLine{\$\ ./game}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Sees\ menu}}
+\DoxyCodeLine{Welcome\ to\ FCAI\ \mbox{\hyperlink{class_board}{Board}}\ Games...}
+\DoxyCodeLine{Menu:}
+\DoxyCodeLine{\ \ 1.\ Play\ Four-\/in-\/a-\/Row}
+\DoxyCodeLine{\ \ ...}
+\DoxyCodeLine{Enter\ your\ choice:\ 3}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Game\ initializes}}
+\DoxyCodeLine{Starting\ 5x5\ Tic-\/Tac-\/Toe...}
+\DoxyCodeLine{Setup\ players...}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Game\ runs}}
+\DoxyCodeLine{[Game\ plays\ out]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Cleanup\ and\ exit}}
+\DoxyCodeLine{Thank\ you\ \textcolor{keywordflow}{for}\ playing!}
+
+\end{DoxyCode}
+ \hypertarget{_main___menu_8cpp_game_handlers}{}\doxysubsection{\texorpdfstring{Game Handler Sections}{Game Handler Sections}}\label{_main___menu_8cpp_game_handlers}
+Each game handler follows the same pattern\+:
+\begin{DoxyEnumerate}
+\item Display starting message
+\item Create \doxylink{class_u_i}{UI} (handles input/output)
+\item Create \doxylink{class_board}{Board} (handles game logic)
+\item Setup players through \doxylink{class_u_i}{UI}
+\item Create \doxylink{class_game_manager}{Game\+Manager} to orchestrate
+\item Run game to completion
+\item Clean up all allocated memory
+\end{DoxyEnumerate}

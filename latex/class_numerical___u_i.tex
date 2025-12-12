@@ -1,0 +1,180 @@
+\doxysection{Numerical\+\_\+\+UI Class Reference}
+\hypertarget{class_numerical___u_i}{}\label{class_numerical___u_i}\index{Numerical\_UI@{Numerical\_UI}}
+
+
+User interface for Numerical Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Numerical\+\_\+tic\+\_\+tac\+\_\+9.\+h$>$}
+
+Inheritance diagram for Numerical\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_numerical___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_numerical___u_i_a2df77448a71627dbeb30f4c1694e5b2d}{Numerical\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs \doxylink{class_u_i}{UI} and displays game rules. \end{DoxyCompactList}\item 
+\Hypertarget{class_numerical___u_i_af5f69a5877592105d787a4549e490be8}\label{class_numerical___u_i_af5f69a5877592105d787a4549e490be8} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Numerical\+\_\+\+UI} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_numerical___u_i_adac3d3b9c67ce9aad8e6dba34db8a8b2}{create\+\_\+player}} (string \&name, int symbol, Player\+Type type) override
+\begin{DoxyCompactList}\small\item\em Creates a player with numeric symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_numerical___u_i_a0e5f86fdb5fc9b2ed82f12defff1e8bd}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Gets a number placement move from player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_numerical___u_i_a04803c425d64f478554d7c2794a277e5}{setup\+\_\+players}} () override
+\begin{DoxyCompactList}\small\item\em Sets up both players with correct symbols. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries UI} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual void {\bfseries display\+\_\+message} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, int symbol, Player\+Type type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void {\bfseries display\+\_\+board\+\_\+matrix} (const vector$<$ vector$<$ int $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries get\+\_\+player\+\_\+name} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual Player\+Type {\bfseries get\+\_\+player\+\_\+type\+\_\+choice} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries cell\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User interface for Numerical Tic-\/\+Tac-\/\+Toe. 
+
+Provides game setup, displays rules about odd/even number usage and the sum-\/to-\/15 win condition, and handles move input.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_numerical___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_numerical___u_i_a2df77448a71627dbeb30f4c1694e5b2d}\index{Numerical\_UI@{Numerical\_UI}!Numerical\_UI@{Numerical\_UI}}
+\index{Numerical\_UI@{Numerical\_UI}!Numerical\_UI@{Numerical\_UI}}
+\doxysubsubsection{\texorpdfstring{Numerical\_UI()}{Numerical\_UI()}}
+{\footnotesize\ttfamily \label{class_numerical___u_i_a2df77448a71627dbeb30f4c1694e5b2d} 
+Numerical\+\_\+\+UI\+::\+Numerical\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs \doxylink{class_u_i}{UI} and displays game rules. 
+
+Shows\+:
+\begin{DoxyItemize}
+\item \doxylink{class_player}{Player} 1 uses odd numbers\+: 1, 3, 5, 7, 9
+\item \doxylink{class_player}{Player} 2 uses even numbers\+: 2, 4, 6, 8
+\item Each number can only be used once
+\item Win by getting sum of 15 in any line 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_numerical___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_numerical___u_i_adac3d3b9c67ce9aad8e6dba34db8a8b2}\index{Numerical\_UI@{Numerical\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Numerical\_UI@{Numerical\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_numerical___u_i_adac3d3b9c67ce9aad8e6dba34db8a8b2} 
+\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*} Numerical\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{int}]{symbol}{, }\item[{Player\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Creates a player with numeric symbol. 
+
+Symbol meanings\+:
+\begin{DoxyItemize}
+\item 1 = \doxylink{class_player}{Player} using odd numbers
+\item 2 = \doxylink{class_player}{Player} using even numbers
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player} identifier (1 for odd, 2 for even) \\
+\hline
+{\em type} & \doxylink{class_player}{Player} type (HUMAN or COMPUTER) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new \doxylink{class_player}{Player$<$int$>$} object 
+\end{DoxyReturn}
+\Hypertarget{class_numerical___u_i_a0e5f86fdb5fc9b2ed82f12defff1e8bd}\index{Numerical\_UI@{Numerical\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Numerical\_UI@{Numerical\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_numerical___u_i_a0e5f86fdb5fc9b2ed82f12defff1e8bd} 
+\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} Numerical\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a number placement move from player. 
+
+For human players\+:
+\begin{DoxyItemize}
+\item Displays available numbers
+\item Prompts for number selection
+\item Validates number is available
+\item Prompts for position (row, col)
+\end{DoxyItemize}
+
+For computer players\+:
+\begin{DoxyItemize}
+\item Randomly selects from available numbers
+\item Randomly selects empty cell
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player making move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move$<$int$>$} with position and number 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ int $>$}}.
+
+\Hypertarget{class_numerical___u_i_a04803c425d64f478554d7c2794a277e5}\index{Numerical\_UI@{Numerical\_UI}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!Numerical\_UI@{Numerical\_UI}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \label{class_numerical___u_i_a04803c425d64f478554d7c2794a277e5} 
+\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Numerical\+\_\+\+UI\+::setup\+\_\+players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets up both players with correct symbols. 
+
+Ensures \doxylink{class_player}{Player} 1 gets symbol 1 (odd numbers) and \doxylink{class_player}{Player} 2 gets symbol 2 (even numbers).
+
+\begin{DoxyReturn}{Returns}
+Array of two \doxylink{class_player}{Player$<$int$>$} pointers 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{UI$<$ int $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_numerical__tic__tac__9_8h}{Numerical\+\_\+tic\+\_\+tac\+\_\+9.\+h}}\item 
+Numerical\+\_\+tic\+\_\+tac\+\_\+9.\+cpp\end{DoxyCompactItemize}

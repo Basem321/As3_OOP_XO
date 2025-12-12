@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['cell_5fwidth_0',['cell_width',['../class_u_i.html#a6c79c489ae9aa3a7860fb58e5a14ddfe',1,'UI']]],
-  ['columns_1',['columns',['../class_board.html#afaf8842d9d52ac724e8c2f5642ecafc7',1,'Board']]],
-  ['create_5fplayer_2',['create_player',['../class_u_i.html#a94561e0bb4bbcbe5ff71ca6d751922df',1,'UI']]]
+  ['board_0',['Board',['../class_board.html',1,'Board&lt; T &gt;'],['../class_board.html#ae5dfded241ee3644196e2f6074d1d0b1',1,'Board::Board(int rows, int columns)']]],
+  ['board_1',['board',['../class_board.html#af00c1fc363eb640ca276b8a572040040',1,'Board']]],
+  ['board_20game_20collection_2',['FCAI Board Game Collection',['../index.html',1,'']]],
+  ['board_3c_20char_20_3e_3',['Board&lt; char &gt;',['../class_board.html',1,'']]],
+  ['board_3c_20int_20_3e_4',['Board&lt; int &gt;',['../class_board.html',1,'']]],
+  ['boardptr_5',['boardPtr',['../class_player.html#a26249e756f850b6585267bfbc928ac79',1,'Player']]]
 ];

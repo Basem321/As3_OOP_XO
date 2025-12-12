@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['create_5fplayer_0',['create_player',['../class_u_i.html#a94561e0bb4bbcbe5ff71ca6d751922df',1,'UI']]]
+  ['board_0',['Board',['../class_board.html#ae5dfded241ee3644196e2f6074d1d0b1',1,'Board']]]
 ];

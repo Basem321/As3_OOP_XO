@@ -1,0 +1,66 @@
+\doxysection{Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}
+\hypertarget{_obstacles___tic___tac___toe_8h_source}{}\label{_obstacles___tic___tac___toe_8h_source}\mbox{\hyperlink{_obstacles___tic___tac___toe_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ OBSTACLES\_TIC\_TAC\_TOE\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ OBSTACLES\_TIC\_TAC\_TOE\_H}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obstacles___tic___tac___toe___board_aa552566ef5e1e97d726629279bcb0eca}{Obstacles\_Tic\_Tac\_Toe\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_ac87504647c8f2fec3bda361a85b4b089}{ROWS}}\ =\ 6;\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_afc990c03d73a156c1a014f04fd939709}{COLS}}\ =\ 6;\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_aa552566ef5e1e97d726629279bcb0eca}{Obstacles\_Tic\_Tac\_Toe\_Board}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_aec21e5c4c8d86e03eefe69e4ff992d55}{\string~Obstacles\_Tic\_Tac\_Toe\_Board}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_a047fcc4f38d99a3258325fb21a9b1bc9}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_a64bde5495c5903b15c004e44b6760280}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_a1f69f0b76e3803ca3e71bd6ffb929219}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_ab2af8cc26e3524ead075ee2029206772}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_a0cb8217f994a7d51d719fca02643c4ba}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_acd3aaf863c73f599417ca72c393187d0}{add\_random\_obstacles}}(\textcolor{keywordtype}{int}\ n\ =\ 2);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_ae9e479eb2a39b205e92e8ecf3ab18658}{clear\_board}}();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00148\ \ \ \ \ vector<pair<int,\ int>>\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___board_a054a2e4b89a6e16da6cf2aa61edd8559}{get\_empty\_cells}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{bool}\ four\_in\_a\_row\_from(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ c,\ \textcolor{keywordtype}{char}\ sym)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{bool}\ board\_full()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{int}\ moves\_this\_round\ =\ 0;}
+\DoxyCodeLine{00179\ \};}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00190\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obstacles___tic___tac___toe___u_i_a3a53109f7aa7ae39cb189aee661a9610}{Obstacles\_Tic\_Tac\_Toe\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00191\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00195\ \ \ \ \ \mbox{\hyperlink{class_obstacles___tic___tac___toe___u_i_a3a53109f7aa7ae39cb189aee661a9610}{Obstacles\_Tic\_Tac\_Toe\_UI}}()\ :\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>(\textcolor{stringliteral}{"{}Obstacles\ Tic-\/Tac-\/Toe\ UI"{}},\ 2)\ \{\}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___u_i_a7e6f5c8ca578a9a353b0882282ad8691}{\string~Obstacles\_Tic\_Tac\_Toe\_UI}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___u_i_acfdbb7610a6289baad28b79e98957eec}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_obstacles___tic___tac___toe___u_i_a2b3cf0f0c72afea73da3faa216e0e193}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00225\ \};}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ OBSTACLES\_TIC\_TAC\_TOE\_H}}
+
+\end{DoxyCode}

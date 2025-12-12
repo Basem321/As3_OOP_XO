@@ -25,12 +25,13 @@
 var NAVTREE =
 [
   [ "My Project", "index.html", [
+    [ "FCAI Board Game Collection", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
@@ -47,7 +48,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_board_game___classes_8h_source.html"
+"_board_game___classes_8h_source.html",
+"class_word_tic_tac_toe___u_i.html#aabab355ea0975e70adc70cc2c349bda3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

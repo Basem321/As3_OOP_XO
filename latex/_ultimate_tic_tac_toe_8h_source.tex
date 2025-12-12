@@ -1,0 +1,101 @@
+\doxysection{Ultimate\+Tic\+Tac\+Toe.\+h}
+\hypertarget{_ultimate_tic_tac_toe_8h_source}{}\label{_ultimate_tic_tac_toe_8h_source}\mbox{\hyperlink{_ultimate_tic_tac_toe_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ ULTIMATE\_TICTACTOE\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ ULTIMATE\_TICTACTOE\_H}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mini_board_a477bc854700264a37803e93cd9b7dd8f}{MiniBoard}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{char}\ blank\_symbol\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_mini_board_a477bc854700264a37803e93cd9b7dd8f}{MiniBoard}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_mini_board_afcd998ab8a566b2f38841be69088fa42}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_mini_board_a56dda692e86fffbe0efd2bfbd92a506b}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_mini_board_a1bab368c231f93a900f6aa0a68653a59}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_mini_board_a478f9fdf84fc6d6b9d10c60783f9c937}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_mini_board_a887b4b0006638940f97990b94ff646a4}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mini_board_af6d750e6cb4128e3ffc48f84c120dc97}{reset}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_mini_board_abfcb2092b21ccbc9b4d2cae84708c7f8}{check\_winner}}();}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate_tic_tac_toe___board_a5cd2d544fd6dda298564886d5246d526}{UltimateTicTacToe\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00126\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{class_mini_board}{MiniBoard}}\ mini\_board\_X;\ }
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{class_mini_board}{MiniBoard}}\ mini\_board\_O;\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{char}\ main\_board[3][3];\ \ }
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{int}\ active\_board\_x;\ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{int}\ active\_board\_y;\ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{bool}\ first\_move;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ current\_player;\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{bool}\ sub\_game\_in\_progress;\ \ \ \ }
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ last\_cell\_x;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{int}\ last\_cell\_y;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{bool}\ check\_main\_board\_win(\textcolor{keywordtype}{char}\ symbol);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_main\_board\_full();}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_a5cd2d544fd6dda298564886d5246d526}{UltimateTicTacToe\_Board}}();}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_a63aaca2bb3d579cb85650dc9af3598b7}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_a84b8a6e3aa17481a29e99388c532ee2b}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_ae2143ee2caecf916a9b80eda06bf3d3e}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_af7a0e5d94dcf8f492b22958003b089fa}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_ac974a5ad79223188f9f2057780682232}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_af81d7de2e1b21627a2530b77dd2008d1}{start\_sub\_game}}(\textcolor{keywordtype}{int}\ board\_x,\ \textcolor{keywordtype}{int}\ board\_y,\ \mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_a067f0a894fdd1fbeb2a58d42ff35b5bb}{end\_sub\_game}}();}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00235\ \ \ \ \ \mbox{\hyperlink{class_mini_board}{MiniBoard}}*\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_aad00142eb8718dcb48b9f9295bc9f3d9}{get\_current\_mini\_board}}();}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_a5816126a6dd1ae6dfa797bbf9b1562df}{get\_active\_board\_x}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ active\_board\_x;\ \}}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_a58e350a4e0dab34bbf13d2b6a48d8585}{get\_active\_board\_y}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ active\_board\_y;\ \}}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_a979dccd7176eadc6b9fe17d1026c9c1c}{is\_first\_move}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ first\_move;\ \}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_a28ad7d7714e19b1e1da8a5bc567f94e9}{is\_sub\_game\_in\_progress}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ sub\_game\_in\_progress;\ \}}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_aa589bef7654e899832d2e13389c64693}{get\_main\_board\_cell}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ main\_board[x][y];\ \}}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordtype}{char}\&\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_a61a29dd64b42db0b16ac25aad29db847}{get\_main\_board\_cell\_ref}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \{\ \textcolor{keywordflow}{return}\ main\_board[x][y];\ \}}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___board_a14f02cce8f533d76e41e21e21c6aa891}{is\_position\_available}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ main\_board[x][y]\ ==\ 0;\ \}}
+\DoxyCodeLine{00284\ \};}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00299\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate_tic_tac_toe___u_i_a5dcbc77df33da04c615b992c05f9897f}{UltimateTicTacToe\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00300\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00310\ \ \ \ \ \mbox{\hyperlink{class_ultimate_tic_tac_toe___u_i_a5dcbc77df33da04c615b992c05f9897f}{UltimateTicTacToe\_UI}}();}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00320\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___u_i_a76e484f22919ff2068ecbe5ae91874f4}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00333\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___u_i_a4338a56b42da0f2b00ad0d0eb5659a92}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___u_i_a1defbf5b9014ba7342ee06bee168b584}{display\_main\_board}}(\mbox{\hyperlink{class_ultimate_tic_tac_toe___board}{UltimateTicTacToe\_Board}}*\ board);}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00353\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ultimate_tic_tac_toe___u_i_a77cf1fbe0ae49cd2b1d071cb75f72d5b}{display\_mini\_board}}(\mbox{\hyperlink{class_mini_board}{MiniBoard}}*\ mini\_board,\ \textcolor{keywordtype}{int}\ board\_x,\ \textcolor{keywordtype}{int}\ board\_y);}
+\DoxyCodeLine{00354\ \};}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ULTIMATE\_TICTACTOE\_H}}
+
+\end{DoxyCode}

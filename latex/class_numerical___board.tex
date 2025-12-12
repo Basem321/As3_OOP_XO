@@ -1,0 +1,310 @@
+\doxysection{Numerical\+\_\+\+Board Class Reference}
+\hypertarget{class_numerical___board}{}\label{class_numerical___board}\index{Numerical\_Board@{Numerical\_Board}}
+
+
+Represents a Numerical Tic-\/\+Tac-\/\+Toe board.  
+
+
+
+
+{\ttfamily \#include $<$Numerical\+\_\+tic\+\_\+tac\+\_\+9.\+h$>$}
+
+Inheritance diagram for Numerical\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_numerical___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_numerical___board_a4fb0e1b6e368c8b6a591fb1d95b19077}{Numerical\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a 3×3 numerical board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical___board_a28020ed5677f1a6b77589f0322b02669}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Updates board with a player\textquotesingle{}s number placement. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical___board_aae10be94151c42e6f3cb9ab8fe45616e}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if any line sums to 15. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical___board_a2019490db1e1a0c09020e7a7ba4269b4}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if player has lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical___board_aeed87eaf1055fefff316d33e32959eab}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if game is a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical___board_af99571b4b13a158516702a9f1ab2bba9}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if game has ended. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical___board_a20c4dcc6611afed20a2dc1a2144cca4a}{is\+\_\+valid\+\_\+number}} (int number, \mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Validates if a number can be used by a player. \end{DoxyCompactList}\item 
+set$<$ int $>$ \mbox{\hyperlink{class_numerical___board_a5351c2af555cbd982ee2dbd6d1ef093d}{get\+\_\+available\+\_\+numbers}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Gets all unused numbers available to a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+n\+\_\+moves} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a Numerical Tic-\/\+Tac-\/\+Toe board. 
+
+A 3×3 board where players place numbers instead of symbols. The game uses a magic square principle where any line (row, column, or diagonal) that sums to 15 wins the game.
+
+Number allocation\+:
+\begin{DoxyItemize}
+\item \doxylink{class_player}{Player} 1 (symbol=1)\+: Uses odd numbers \{1, 3, 5, 7, 9\}
+\item \doxylink{class_player}{Player} 2 (symbol=2)\+: Uses even numbers \{2, 4, 6, 8\}
+\end{DoxyItemize}
+
+Win condition\+:
+\begin{DoxyItemize}
+\item Any complete row, column, or diagonal that sums to exactly 15
+\end{DoxyItemize}
+
+Draw condition\+:
+\begin{DoxyItemize}
+\item All 9 cells filled without any sum of 15
+\end{DoxyItemize}
+
+Strategic depth\+:
+\begin{DoxyItemize}
+\item Each number can only be used once
+\item Players must balance using small vs large numbers
+\item Multiple potential winning lines to defend/attack
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_numerical___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_numerical___board_a4fb0e1b6e368c8b6a591fb1d95b19077}\index{Numerical\_Board@{Numerical\_Board}!Numerical\_Board@{Numerical\_Board}}
+\index{Numerical\_Board@{Numerical\_Board}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{Numerical\_Board()}{Numerical\_Board()}}
+{\footnotesize\ttfamily \label{class_numerical___board_a4fb0e1b6e368c8b6a591fb1d95b19077} 
+Numerical\+\_\+\+Board\+::\+Numerical\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a 3×3 numerical board. 
+
+Initializes\+:
+\begin{DoxyItemize}
+\item Empty 3×3 grid (all cells = 0)
+\item Player\+\_\+\+Odd set with \{1, 3, 5, 7, 9\}
+\item Player\+\_\+\+Even set with \{2, 4, 6, 8\}
+\item Empty used\+\_\+numbers set 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_numerical___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_numerical___board_af99571b4b13a158516702a9f1ab2bba9}\index{Numerical\_Board@{Numerical\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_numerical___board_af99571b4b13a158516702a9f1ab2bba9} 
+bool Numerical\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if game has ended. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if game won or drawn, false if game continues 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical___board_a5351c2af555cbd982ee2dbd6d1ef093d}\index{Numerical\_Board@{Numerical\_Board}!get\_available\_numbers@{get\_available\_numbers}}
+\index{get\_available\_numbers@{get\_available\_numbers}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{get\_available\_numbers()}{get\_available\_numbers()}}
+{\footnotesize\ttfamily \label{class_numerical___board_a5351c2af555cbd982ee2dbd6d1ef093d} 
+set$<$ int $>$ Numerical\+\_\+\+Board\+::get\+\_\+available\+\_\+numbers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Gets all unused numbers available to a player. 
+
+Returns the player\textquotesingle{}s number set (odd or even) minus any numbers already placed on the board.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player requesting available numbers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of integers the player can still use 
+\end{DoxyReturn}
+\Hypertarget{class_numerical___board_aeed87eaf1055fefff316d33e32959eab}\index{Numerical\_Board@{Numerical\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_numerical___board_aeed87eaf1055fefff316d33e32959eab} 
+bool Numerical\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if game is a draw. 
+
+Game is drawn when all 9 cells are filled and no line sums to 15.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if board full with no sum of 15, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical___board_a2019490db1e1a0c09020e7a7ba4269b4}\index{Numerical\_Board@{Numerical\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_numerical___board_a2019490db1e1a0c09020e7a7ba4269b4} 
+bool Numerical\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if player has lost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false (not used in this variant) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical___board_a20c4dcc6611afed20a2dc1a2144cca4a}\index{Numerical\_Board@{Numerical\_Board}!is\_valid\_number@{is\_valid\_number}}
+\index{is\_valid\_number@{is\_valid\_number}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_number()}{is\_valid\_number()}}
+{\footnotesize\ttfamily \label{class_numerical___board_a20c4dcc6611afed20a2dc1a2144cca4a} 
+bool Numerical\+\_\+\+Board\+::is\+\_\+valid\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{number}{, }\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Validates if a number can be used by a player. 
+
+Checks\+:
+\begin{DoxyItemize}
+\item Number hasn\textquotesingle{}t been used before
+\item Number is in player\textquotesingle{}s available set (odd or even)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & The number to validate \\
+\hline
+{\em player} & Pointer to player attempting to use the number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if number valid for player, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_numerical___board_aae10be94151c42e6f3cb9ab8fe45616e}\index{Numerical\_Board@{Numerical\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_numerical___board_aae10be94151c42e6f3cb9ab8fe45616e} 
+bool Numerical\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if any line sums to 15. 
+
+Examines all 8 possible winning lines\+:
+\begin{DoxyItemize}
+\item 3 rows
+\item 3 columns
+\item 2 diagonals
+\end{DoxyItemize}
+
+A line wins if\+:
+\begin{DoxyItemize}
+\item All 3 cells are filled (non-\/zero), AND
+\item The sum equals exactly 15
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if any complete line sums to 15, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical___board_a28020ed5677f1a6b77589f0322b02669}\index{Numerical\_Board@{Numerical\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_numerical___board_a28020ed5677f1a6b77589f0322b02669} 
+bool Numerical\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates board with a player\textquotesingle{}s number placement. 
+
+Validates\+:
+\begin{DoxyItemize}
+\item Position is in bounds and empty
+\item Number hasn\textquotesingle{}t been used before
+\item Number belongs to current player\textquotesingle{}s set
+\end{DoxyItemize}
+
+Special case\+: symbol=0 allows undo of a move
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move$<$int$>$} with position and number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if number valid and placed, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ int $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_numerical__tic__tac__9_8h}{Numerical\+\_\+tic\+\_\+tac\+\_\+9.\+h}}\item 
+Numerical\+\_\+tic\+\_\+tac\+\_\+9.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\doxysection{Diamond\+\_\+\+AI\+\_\+\+Player Class Reference}
+\hypertarget{class_diamond___a_i___player}{}\label{class_diamond___a_i___player}\index{Diamond\_AI\_Player@{Diamond\_AI\_Player}}
+
+
+AI player implementation for Diamond Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Diamond\+\_\+\+AI\+\_\+\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_diamond___a_i___player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_diamond___a_i___player_ab4962072f45b229fe51c68c269511ba2}{Diamond\+\_\+\+AI\+\_\+\+Player}} (string n, char s)
+\begin{DoxyCompactList}\small\item\em Constructs an AI player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_diamond___a_i___player_af81d5feeb55b179dc001a8aeec41b631}{get\+\_\+ai\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Generates an AI move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Player} (string n, char s, Player\+Type t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+string {\bfseries get\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+Player\+Type {\bfseries get\+\_\+type} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+symbol} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} {\bfseries get\+\_\+board\+\_\+ptr} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void {\bfseries set\+\_\+board\+\_\+ptr} (\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+Player\+Type {\bfseries type}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+char {\bfseries symbol}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} {\bfseries board\+Ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+AI player implementation for Diamond Tic-\/\+Tac-\/\+Toe. 
+
+Simple AI that selects the first available cell within the diamond shape, prioritizing cells closer to the center.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_player}{Player} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_diamond___a_i___player_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_diamond___a_i___player_ab4962072f45b229fe51c68c269511ba2}\index{Diamond\_AI\_Player@{Diamond\_AI\_Player}!Diamond\_AI\_Player@{Diamond\_AI\_Player}}
+\index{Diamond\_AI\_Player@{Diamond\_AI\_Player}!Diamond\_AI\_Player@{Diamond\_AI\_Player}}
+\doxysubsubsection{\texorpdfstring{Diamond\_AI\_Player()}{Diamond\_AI\_Player()}}
+{\footnotesize\ttfamily \label{class_diamond___a_i___player_ab4962072f45b229fe51c68c269511ba2} 
+Diamond\+\_\+\+AI\+\_\+\+Player\+::\+Diamond\+\_\+\+AI\+\_\+\+Player (\begin{DoxyParamCaption}\item[{string}]{n}{, }\item[{char}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs an AI player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \doxylink{class_player}{Player} name \\
+\hline
+{\em s} & \doxylink{class_player}{Player} symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_diamond___a_i___player_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_diamond___a_i___player_af81d5feeb55b179dc001a8aeec41b631}\index{Diamond\_AI\_Player@{Diamond\_AI\_Player}!get\_ai\_move@{get\_ai\_move}}
+\index{get\_ai\_move@{get\_ai\_move}!Diamond\_AI\_Player@{Diamond\_AI\_Player}}
+\doxysubsubsection{\texorpdfstring{get\_ai\_move()}{get\_ai\_move()}}
+{\footnotesize\ttfamily \label{class_diamond___a_i___player_af81d5feeb55b179dc001a8aeec41b631} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Diamond\+\_\+\+AI\+\_\+\+Player\+::get\+\_\+ai\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates an AI move. 
+
+Searches for the first empty cell within the diamond shape, starting from positions closer to the center (row 3, col 3).
+
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move} object, or nullptr if no valid moves 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_diamond___tic___tac___toe_8h}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp\end{DoxyCompactItemize}

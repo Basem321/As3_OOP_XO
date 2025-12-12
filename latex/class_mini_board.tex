@@ -1,0 +1,228 @@
+\doxysection{Mini\+Board Class Reference}
+\hypertarget{class_mini_board}{}\label{class_mini_board}\index{MiniBoard@{MiniBoard}}
+
+
+Represents one 3×3 sub-\/board in Ultimate Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Ultimate\+Tic\+Tac\+Toe.\+h$>$}
+
+Inheritance diagram for Mini\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mini_board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mini_board_a477bc854700264a37803e93cd9b7dd8f}\label{class_mini_board_a477bc854700264a37803e93cd9b7dd8f} 
+{\bfseries Mini\+Board} ()
+\begin{DoxyCompactList}\small\item\em Constructs a 3×3 mini-\/board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mini_board_afcd998ab8a566b2f38841be69088fa42}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Updates the mini-\/board with a move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mini_board_a56dda692e86fffbe0efd2bfbd92a506b}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if player has won this mini-\/board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mini_board_a1bab368c231f93a900f6aa0a68653a59}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if player has lost this mini-\/board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mini_board_a478f9fdf84fc6d6b9d10c60783f9c937}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if mini-\/board is a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mini_board_a887b4b0006638940f97990b94ff646a4}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if mini-\/board game is complete. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mini_board_af6d750e6cb4128e3ffc48f84c120dc97}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets mini-\/board to empty state. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_mini_board_abfcb2092b21ccbc9b4d2cae84708c7f8}{check\+\_\+winner}} ()
+\begin{DoxyCompactList}\small\item\em Determines the winner or draw state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+n\+\_\+moves} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents one 3×3 sub-\/board in Ultimate Tic-\/\+Tac-\/\+Toe. 
+
+A standard Tic-\/\+Tac-\/\+Toe board that functions as one cell in the larger 3×3 meta-\/game. When won, this mini-\/board\textquotesingle{}s result is recorded on the main board.
+
+Possible states\+:
+\begin{DoxyItemize}
+\item In progress\+: Empty or partially filled
+\item Won by X\+: Returns \textquotesingle{}X\textquotesingle{} from \doxylink{class_mini_board_abfcb2092b21ccbc9b4d2cae84708c7f8}{check\+\_\+winner()}
+\item Won by O\+: Returns \textquotesingle{}O\textquotesingle{} from \doxylink{class_mini_board_abfcb2092b21ccbc9b4d2cae84708c7f8}{check\+\_\+winner()}
+\item Draw\+: Returns \textquotesingle{}D\textquotesingle{} from \doxylink{class_mini_board_abfcb2092b21ccbc9b4d2cae84708c7f8}{check\+\_\+winner()}
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+\label{doc-func-members}
+\Hypertarget{class_mini_board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mini_board_abfcb2092b21ccbc9b4d2cae84708c7f8}\index{MiniBoard@{MiniBoard}!check\_winner@{check\_winner}}
+\index{check\_winner@{check\_winner}!MiniBoard@{MiniBoard}}
+\doxysubsubsection{\texorpdfstring{check\_winner()}{check\_winner()}}
+{\footnotesize\ttfamily \label{class_mini_board_abfcb2092b21ccbc9b4d2cae84708c7f8} 
+char Mini\+Board\+::check\+\_\+winner (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Determines the winner or draw state. 
+
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}X\textquotesingle{} if X won, \textquotesingle{}O\textquotesingle{} if O won, \textquotesingle{}D\textquotesingle{} if draw, 0 if in progress 
+\end{DoxyReturn}
+\Hypertarget{class_mini_board_a887b4b0006638940f97990b94ff646a4}\index{MiniBoard@{MiniBoard}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!MiniBoard@{MiniBoard}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_mini_board_a887b4b0006638940f97990b94ff646a4} 
+bool Mini\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if mini-\/board game is complete. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if won or drawn, false if still in progress 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_mini_board_a478f9fdf84fc6d6b9d10c60783f9c937}\index{MiniBoard@{MiniBoard}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!MiniBoard@{MiniBoard}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_mini_board_a478f9fdf84fc6d6b9d10c60783f9c937} 
+bool Mini\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if mini-\/board is a draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if board full with no winner, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_mini_board_a1bab368c231f93a900f6aa0a68653a59}\index{MiniBoard@{MiniBoard}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!MiniBoard@{MiniBoard}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_mini_board_a1bab368c231f93a900f6aa0a68653a59} 
+bool Mini\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if player has lost this mini-\/board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false (handled by check\+\_\+winner) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_mini_board_a56dda692e86fffbe0efd2bfbd92a506b}\index{MiniBoard@{MiniBoard}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!MiniBoard@{MiniBoard}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_mini_board_a56dda692e86fffbe0efd2bfbd92a506b} 
+bool Mini\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if player has won this mini-\/board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if player has three in a row, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_mini_board_af6d750e6cb4128e3ffc48f84c120dc97}\index{MiniBoard@{MiniBoard}!reset@{reset}}
+\index{reset@{reset}!MiniBoard@{MiniBoard}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \label{class_mini_board_af6d750e6cb4128e3ffc48f84c120dc97} 
+void Mini\+Board\+::reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Resets mini-\/board to empty state. 
+
+Clears all cells and resets move counter. Used when starting a new sub-\/game. \Hypertarget{class_mini_board_afcd998ab8a566b2f38841be69088fa42}\index{MiniBoard@{MiniBoard}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!MiniBoard@{MiniBoard}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_mini_board_afcd998ab8a566b2f38841be69088fa42} 
+bool Mini\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the mini-\/board with a move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move} with position and symbol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move valid and placed, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ultimate_tic_tac_toe_8h}{Ultimate\+Tic\+Tac\+Toe.\+h}}\item 
+Ultimate\+Tic\+Tac\+Toe.\+cpp\end{DoxyCompactItemize}

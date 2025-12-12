@@ -124,6 +124,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>get_rows</b> () const<
 <tr class="memitem:ac665e1ed1f49125fab248e2c9ddfd608" id="r_ac665e1ed1f49125fab248e2c9ddfd608"><td class="memItemLeft" align="right" valign="top"><a id="ac665e1ed1f49125fab248e2c9ddfd608" name="ac665e1ed1f49125fab248e2c9ddfd608"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>get_columns</b> () const</td></tr>
 <tr class="memdesc:ac665e1ed1f49125fab248e2c9ddfd608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of columns. <br /></td></tr>
+<tr class="memitem:a512d0bd8c282985c410d677c82eb3b78" id="r_a512d0bd8c282985c410d677c82eb3b78"><td class="memItemLeft" align="right" valign="top"><a id="a512d0bd8c282985c410d677c82eb3b78" name="a512d0bd8c282985c410d677c82eb3b78"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>get_n_moves</b> () const</td></tr>
+<tr class="memdesc:a512d0bd8c282985c410d677c82eb3b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of moves. <br /></td></tr>
+<tr class="memitem:a93558c58e60ca4291c6044828afd260b" id="r_a93558c58e60ca4291c6044828afd260b"><td class="memItemLeft" align="right" valign="top"><a id="a93558c58e60ca4291c6044828afd260b" name="a93558c58e60ca4291c6044828afd260b"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>get_cell</b> (int x, int y)</td></tr>
+<tr class="memdesc:a93558c58e60ca4291c6044828afd260b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return content of cell x, y in current board. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -178,7 +184,7 @@ template&lt;typename T&gt; </div>
 
 <p>Check if the game is over. </p>
 
-<p>Implemented in <a class="el" href="class_x___o___board.html#aaee6e3efcbd685d9792d6d81356bba45">X_O_Board</a>.</p>
+<p>Implemented in <a class="el" href="class_diamond___tic___tac___toe___board.html#a715b08f18d1d8c3b53330d1cd1e60969">Diamond_Tic_Tac_Toe_Board</a>, <a class="el" href="class_four_in_a_row___board.html#a526c423b94ab4c5237b177a2253a8571">FourInARow_Board</a>, <a class="el" href="class_infinity___board.html#a269b17b6ede5bd97bcf60a28e04a83d3">Infinity_Board</a>, <a class="el" href="class_memory_t_t_t___board.html#a92a0116d33248b1cae621247a9227091">MemoryTTT_Board</a>, <a class="el" href="class_mini_board.html#a887b4b0006638940f97990b94ff646a4">MiniBoard</a>, <a class="el" href="class_misere___tic___tac___toe___board.html#ac0da2c7e385c2b6f1e25e227e3094882">Misere_Tic_Tac_Toe_Board</a>, <a class="el" href="class_numerical___board.html#af99571b4b13a158516702a9f1ab2bba9">Numerical_Board</a>, <a class="el" href="class_obstacles___tic___tac___toe___board.html#a0cb8217f994a7d51d719fca02643c4ba">Obstacles_Tic_Tac_Toe_Board</a>, <a class="el" href="class_s_u_s___board.html#acd2c39612239065da3aea67ac7c27aa4">SUS_Board</a>, <a class="el" href="class_tic___tac___toe__4x4___board.html#aeeb8a165be0b088933d863a9660b5b28">Tic_Tac_Toe_4x4_Board</a>, <a class="el" href="class_tic_tac_toe5x5.html#aaf4397c5133697ba59febb08a169bc5d">TicTacToe5x5</a>, <a class="el" href="class_ultimate_tic_tac_toe___board.html#ac974a5ad79223188f9f2057780682232">UltimateTicTacToe_Board</a>, <a class="el" href="class_word_tic_tac_toe___board.html#a38246d03269fe58b8e880f8da8cad47e">WordTicTacToe_Board</a>, and <a class="el" href="class_x___o___board.html#aaee6e3efcbd685d9792d6d81356bba45">X_O_Board</a>.</p>
 
 </div>
 </div>
@@ -209,7 +215,7 @@ template&lt;typename T&gt; </div>
 
 <p>Check if the game ended in a draw. </p>
 
-<p>Implemented in <a class="el" href="class_x___o___board.html#a2be5f37643e21edbdea2361853a6e953">X_O_Board</a>.</p>
+<p>Implemented in <a class="el" href="class_diamond___tic___tac___toe___board.html#a704b5ad751de2cf971517a511cd6c115">Diamond_Tic_Tac_Toe_Board</a>, <a class="el" href="class_four_in_a_row___board.html#af7adcf2ff0fbdd80c6229d8d1220d217">FourInARow_Board</a>, <a class="el" href="class_infinity___board.html#a0c5b524154b39ca1b524247f81afaae7">Infinity_Board</a>, <a class="el" href="class_memory_t_t_t___board.html#aaf15d475809f8b4a322a18a677bccb24">MemoryTTT_Board</a>, <a class="el" href="class_mini_board.html#a478f9fdf84fc6d6b9d10c60783f9c937">MiniBoard</a>, <a class="el" href="class_misere___tic___tac___toe___board.html#ac82077a63b5fc3f546e08d95267c55fe">Misere_Tic_Tac_Toe_Board</a>, <a class="el" href="class_numerical___board.html#aeed87eaf1055fefff316d33e32959eab">Numerical_Board</a>, <a class="el" href="class_obstacles___tic___tac___toe___board.html#ab2af8cc26e3524ead075ee2029206772">Obstacles_Tic_Tac_Toe_Board</a>, <a class="el" href="class_s_u_s___board.html#aeb2ad5ce9bdd10ecf2d3cf06be14e6ca">SUS_Board</a>, <a class="el" href="class_tic___tac___toe__4x4___board.html#a9eeff334df105e377db774078348c691">Tic_Tac_Toe_4x4_Board</a>, <a class="el" href="class_tic_tac_toe5x5.html#ab369e98b7bb05ed5510bf33fa0e8bb91">TicTacToe5x5</a>, <a class="el" href="class_ultimate_tic_tac_toe___board.html#af7a0e5d94dcf8f492b22958003b089fa">UltimateTicTacToe_Board</a>, <a class="el" href="class_word_tic_tac_toe___board.html#a3e0ef585e102013d0c9ec43ab39ea87e">WordTicTacToe_Board</a>, and <a class="el" href="class_x___o___board.html#a2be5f37643e21edbdea2361853a6e953">X_O_Board</a>.</p>
 
 </div>
 </div>
@@ -240,7 +246,7 @@ template&lt;typename T&gt; </div>
 
 <p>Check if a player has lost. </p>
 
-<p>Implemented in <a class="el" href="class_x___o___board.html#aec0358cc4f109084267b953832478e94">X_O_Board</a>.</p>
+<p>Implemented in <a class="el" href="class_diamond___tic___tac___toe___board.html#a8edee1ae1506082d8bc312c26bdb25d7">Diamond_Tic_Tac_Toe_Board</a>, <a class="el" href="class_four_in_a_row___board.html#af305967330965fb62431972e860be8c0">FourInARow_Board</a>, <a class="el" href="class_infinity___board.html#a4846e776c9f213814623b6cf5ee0500f">Infinity_Board</a>, <a class="el" href="class_memory_t_t_t___board.html#a62e2ad88c5fe136f1238e1996ec02eb1">MemoryTTT_Board</a>, <a class="el" href="class_mini_board.html#a1bab368c231f93a900f6aa0a68653a59">MiniBoard</a>, <a class="el" href="class_misere___tic___tac___toe___board.html#a5e7ad51e6873a54f387664a8f42aa43b">Misere_Tic_Tac_Toe_Board</a>, <a class="el" href="class_numerical___board.html#a2019490db1e1a0c09020e7a7ba4269b4">Numerical_Board</a>, <a class="el" href="class_obstacles___tic___tac___toe___board.html#a1f69f0b76e3803ca3e71bd6ffb929219">Obstacles_Tic_Tac_Toe_Board</a>, <a class="el" href="class_s_u_s___board.html#a3761b3ce05e2194ff95893b494a3c933">SUS_Board</a>, <a class="el" href="class_tic___tac___toe__4x4___board.html#a8bd9817e1073c27cc56aadd616b09de9">Tic_Tac_Toe_4x4_Board</a>, <a class="el" href="class_tic_tac_toe5x5.html#a2c81f088264324b731caa7853cf37cac">TicTacToe5x5</a>, <a class="el" href="class_ultimate_tic_tac_toe___board.html#ae2143ee2caecf916a9b80eda06bf3d3e">UltimateTicTacToe_Board</a>, <a class="el" href="class_word_tic_tac_toe___board.html#a24fdbe2bc70bcbc9a42045c683c3c2ed">WordTicTacToe_Board</a>, and <a class="el" href="class_x___o___board.html#aec0358cc4f109084267b953832478e94">X_O_Board</a>.</p>
 
 </div>
 </div>
@@ -271,7 +277,7 @@ template&lt;typename T&gt; </div>
 
 <p>Check if a player has won. </p>
 
-<p>Implemented in <a class="el" href="class_x___o___board.html#aafb56a8db5bf8352157326a52c06e2e6">X_O_Board</a>.</p>
+<p>Implemented in <a class="el" href="class_diamond___tic___tac___toe___board.html#a028f5e087511cf143941e3ffb7310c59">Diamond_Tic_Tac_Toe_Board</a>, <a class="el" href="class_four_in_a_row___board.html#ae40adfd3103adcc7d776e81b7ceea4b6">FourInARow_Board</a>, <a class="el" href="class_infinity___board.html#a0d93549c5b8a55ce0e02f1b2514d6649">Infinity_Board</a>, <a class="el" href="class_memory_t_t_t___board.html#a08c64fda6f8e82f8d3f1aa32ea929872">MemoryTTT_Board</a>, <a class="el" href="class_mini_board.html#a56dda692e86fffbe0efd2bfbd92a506b">MiniBoard</a>, <a class="el" href="class_misere___tic___tac___toe___board.html#aa875d0b9e0937d1194bdf3e7248f9480">Misere_Tic_Tac_Toe_Board</a>, <a class="el" href="class_numerical___board.html#aae10be94151c42e6f3cb9ab8fe45616e">Numerical_Board</a>, <a class="el" href="class_obstacles___tic___tac___toe___board.html#a64bde5495c5903b15c004e44b6760280">Obstacles_Tic_Tac_Toe_Board</a>, <a class="el" href="class_s_u_s___board.html#a2230a0e70a119a14e7e7380ba9b2cb90">SUS_Board</a>, <a class="el" href="class_tic___tac___toe__4x4___board.html#ac70f6c3cf271ef97bf9627631691fe9f">Tic_Tac_Toe_4x4_Board</a>, <a class="el" href="class_tic_tac_toe5x5.html#a3286b74a7ebec7f28415f59afffa131c">TicTacToe5x5</a>, <a class="el" href="class_ultimate_tic_tac_toe___board.html#a84b8a6e3aa17481a29e99388c532ee2b">UltimateTicTacToe_Board</a>, <a class="el" href="class_word_tic_tac_toe___board.html#a3d8bb94142742b99a2420011b4369fab">WordTicTacToe_Board</a>, and <a class="el" href="class_x___o___board.html#aafb56a8db5bf8352157326a52c06e2e6">X_O_Board</a>.</p>
 
 </div>
 </div>
@@ -309,7 +315,7 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the move is valid and applied, false otherwise. </dd></dl>
 
-<p>Implemented in <a class="el" href="class_x___o___board.html#aef2b0da670b2d5dc6333e0e0113f8b3d">X_O_Board</a>.</p>
+<p>Implemented in <a class="el" href="class_diamond___tic___tac___toe___board.html#ab08b7d8c62600f97f3527fcd2fa66edc">Diamond_Tic_Tac_Toe_Board</a>, <a class="el" href="class_four_in_a_row___board.html#a07dd631e0709564c2651681a61a1434c">FourInARow_Board</a>, <a class="el" href="class_infinity___board.html#a73168748decfd8a3bfa9044409d728aa">Infinity_Board</a>, <a class="el" href="class_memory_t_t_t___board.html#a15641445470e280b797ef51003150378">MemoryTTT_Board</a>, <a class="el" href="class_mini_board.html#afcd998ab8a566b2f38841be69088fa42">MiniBoard</a>, <a class="el" href="class_misere___tic___tac___toe___board.html#a474a1857ccfca5fa2588ec90bf26e045">Misere_Tic_Tac_Toe_Board</a>, <a class="el" href="class_numerical___board.html#a28020ed5677f1a6b77589f0322b02669">Numerical_Board</a>, <a class="el" href="class_obstacles___tic___tac___toe___board.html#a047fcc4f38d99a3258325fb21a9b1bc9">Obstacles_Tic_Tac_Toe_Board</a>, <a class="el" href="class_s_u_s___board.html#a22679cdc9a91a17fea898c66ad821e45">SUS_Board</a>, <a class="el" href="class_tic___tac___toe__4x4___board.html#ae9592e5cc2bcdc2fa9a9df2a53250f7d">Tic_Tac_Toe_4x4_Board</a>, <a class="el" href="class_tic_tac_toe5x5.html#a37b39c0f4c294782fdd5a9e89dc6785f">TicTacToe5x5</a>, <a class="el" href="class_ultimate_tic_tac_toe___board.html#a63aaca2bb3d579cb85650dc9af3598b7">UltimateTicTacToe_Board</a>, <a class="el" href="class_word_tic_tac_toe___board.html#aee856b67709f8e3db48ea59e90e97b87">WordTicTacToe_Board</a>, and <a class="el" href="class_x___o___board.html#aef2b0da670b2d5dc6333e0e0113f8b3d">X_O_Board</a>.</p>
 
 </div>
 </div>

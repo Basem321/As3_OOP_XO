@@ -1,0 +1,155 @@
+\doxysection{Four\+In\+ARow\+\_\+\+UI Class Reference}
+\hypertarget{class_four_in_a_row___u_i}{}\label{class_four_in_a_row___u_i}\index{FourInARow\_UI@{FourInARow\_UI}}
+
+
+User interface for Four-\/in-\/a-\/\+Row game.  
+
+
+
+
+{\ttfamily \#include $<$Four\+In\+ARow.\+h$>$}
+
+Inheritance diagram for Four\+In\+ARow\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_four_in_a_row___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_four_in_a_row___u_i_a0df3229797f7af08cdbd3b7ba15d2354}{Four\+In\+ARow\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{class_u_i}{UI} and displays game rules. \end{DoxyCompactList}\item 
+\Hypertarget{class_four_in_a_row___u_i_a9b84c5f7c7caed52ca7d18b5c113c832}\label{class_four_in_a_row___u_i_a9b84c5f7c7caed52ca7d18b5c113c832} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Four\+In\+ARow\+\_\+\+UI} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_four_in_a_row___u_i_a3cde7e7038ef0867d9515d42cb9dcfea}{create\+\_\+player}} (string \&name, char symbol, Player\+Type type) override
+\begin{DoxyCompactList}\small\item\em Creates a player of specified type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_four_in_a_row___u_i_ab65a12f7100299e66f9bb1bac623cb99}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Gets a move from a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries UI} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual void {\bfseries display\+\_\+message} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries get\+\_\+player\+\_\+name} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual Player\+Type {\bfseries get\+\_\+player\+\_\+type\+\_\+choice} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries cell\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User interface for Four-\/in-\/a-\/\+Row game. 
+
+Provides game setup, player creation, move input, and displays game rules and instructions to users.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_four_in_a_row___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_four_in_a_row___u_i_a0df3229797f7af08cdbd3b7ba15d2354}\index{FourInARow\_UI@{FourInARow\_UI}!FourInARow\_UI@{FourInARow\_UI}}
+\index{FourInARow\_UI@{FourInARow\_UI}!FourInARow\_UI@{FourInARow\_UI}}
+\doxysubsubsection{\texorpdfstring{FourInARow\_UI()}{FourInARow\_UI()}}
+{\footnotesize\ttfamily \label{class_four_in_a_row___u_i_a0df3229797f7af08cdbd3b7ba15d2354} 
+Four\+In\+ARow\+\_\+\+UI\+::\+Four\+In\+ARow\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs the \doxylink{class_u_i}{UI} and displays game rules. 
+
+Shows welcome message and explains\+:
+\begin{DoxyItemize}
+\item \doxylink{class_board}{Board} dimensions (6×7)
+\item How to choose columns (0-\/6)
+\item Win condition (4 in a row)
+\item Draw condition 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_four_in_a_row___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_four_in_a_row___u_i_a3cde7e7038ef0867d9515d42cb9dcfea}\index{FourInARow\_UI@{FourInARow\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!FourInARow\_UI@{FourInARow\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_four_in_a_row___u_i_a3cde7e7038ef0867d9515d42cb9dcfea} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Four\+In\+ARow\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{Player\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a player of specified type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player} symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+{\em type} & \doxylink{class_player}{Player} type (HUMAN or COMPUTER) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new \doxylink{class_player}{Player} object 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{UI$<$ char $>$}}.
+
+\Hypertarget{class_four_in_a_row___u_i_ab65a12f7100299e66f9bb1bac623cb99}\index{FourInARow\_UI@{FourInARow\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!FourInARow\_UI@{FourInARow\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_four_in_a_row___u_i_ab65a12f7100299e66f9bb1bac623cb99} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Four\+In\+ARow\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a move from a player. 
+
+For human players\+:
+\begin{DoxyItemize}
+\item Prompts for column number (0-\/6)
+\item Validates input is a valid integer in range
+\end{DoxyItemize}
+
+For computer players\+:
+\begin{DoxyItemize}
+\item Randomly selects an available column
+\item Uses fallback search if random selection fails
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player making the move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move} object with column in y-\/coordinate 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_four_in_a_row_8h}{Four\+In\+ARow.\+h}}\item 
+Four\+In\+ARow.\+cpp\end{DoxyCompactItemize}

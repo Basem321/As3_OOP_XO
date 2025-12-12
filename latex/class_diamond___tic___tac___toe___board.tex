@@ -1,0 +1,250 @@
+\doxysection{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board Class Reference}
+\hypertarget{class_diamond___tic___tac___toe___board}{}\label{class_diamond___tic___tac___toe___board}\index{Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}}
+
+
+Represents a diamond-\/shaped Tic-\/\+Tac-\/\+Toe board.  
+
+
+
+
+{\ttfamily \#include $<$Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_diamond___tic___tac___toe___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_diamond___tic___tac___toe___board_a2975d3c6eab6fb24a94bb4be6023af57}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a 7x7 diamond-\/shaped board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diamond___tic___tac___toe___board_ab08b7d8c62600f97f3527fcd2fa66edc}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Updates the board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diamond___tic___tac___toe___board_a028f5e087511cf143941e3ffb7310c59}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the player has won by getting 4 in a row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diamond___tic___tac___toe___board_a8edee1ae1506082d8bc312c26bdb25d7}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the player has lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diamond___tic___tac___toe___board_a704b5ad751de2cf971517a511cd6c115}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the game is a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diamond___tic___tac___toe___board_a715b08f18d1d8c3b53330d1cd1e60969}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diamond___tic___tac___toe___board_aecc5510a1b960e3a051921ef91449420}{inside\+\_\+diamond}} (int r, int c)
+\begin{DoxyCompactList}\small\item\em Checks if a cell is inside the diamond shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+n\+\_\+moves} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a diamond-\/shaped Tic-\/\+Tac-\/\+Toe board. 
+
+This board is played on a 7x7 grid where only cells forming a diamond shape are valid play positions. Players aim to get 4 marks in a row (horizontal, vertical, or diagonal) to win. The board has 25 total playable cells arranged in a diamond pattern.
+
+\doxylink{class_board}{Board} layout\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ [0]}
+\DoxyCodeLine{\ \ \ \ [0][1][2]}
+\DoxyCodeLine{\ \ [0][1][2][3][4]}
+\DoxyCodeLine{[0][1][2][3][4][5][6]}
+\DoxyCodeLine{\ \ [1][2][3][4][5]}
+\DoxyCodeLine{\ \ \ \ [2][3][4]}
+\DoxyCodeLine{\ \ \ \ \ \ [3]}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_diamond___tic___tac___toe___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_diamond___tic___tac___toe___board_a2975d3c6eab6fb24a94bb4be6023af57}\index{Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}!Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}}
+\index{Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}!Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{Diamond\_Tic\_Tac\_Toe\_Board()}{Diamond\_Tic\_Tac\_Toe\_Board()}}
+{\footnotesize\ttfamily \label{class_diamond___tic___tac___toe___board_a2975d3c6eab6fb24a94bb4be6023af57} 
+Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::\+Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a 7x7 diamond-\/shaped board. 
+
+Initializes a 7x7 grid where cells outside the diamond shape are marked with \textquotesingle{}\#\textquotesingle{} and playable cells are empty (\textquotesingle{} \textquotesingle{}). 
+
+\label{doc-func-members}
+\Hypertarget{class_diamond___tic___tac___toe___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_diamond___tic___tac___toe___board_a715b08f18d1d8c3b53330d1cd1e60969}\index{Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_diamond___tic___tac___toe___board_a715b08f18d1d8c3b53330d1cd1e60969} 
+bool Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if game is won or drawn, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_diamond___tic___tac___toe___board_aecc5510a1b960e3a051921ef91449420}\index{Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}!inside\_diamond@{inside\_diamond}}
+\index{inside\_diamond@{inside\_diamond}!Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{inside\_diamond()}{inside\_diamond()}}
+{\footnotesize\ttfamily \label{class_diamond___tic___tac___toe___board_aecc5510a1b960e3a051921ef91449420} 
+bool Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::inside\+\_\+diamond (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a cell is inside the diamond shape. 
+
+Determines if the given coordinates fall within the valid diamond-\/shaped play area.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Row index (0-\/6) \\
+\hline
+{\em c} & Column index (0-\/6) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if position is inside diamond, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_diamond___tic___tac___toe___board_a704b5ad751de2cf971517a511cd6c115}\index{Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_diamond___tic___tac___toe___board_a704b5ad751de2cf971517a511cd6c115} 
+bool Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game is a draw. 
+
+The game is drawn when all 25 playable cells are filled and no player has won.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all cells filled with no winner, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_diamond___tic___tac___toe___board_a8edee1ae1506082d8bc312c26bdb25d7}\index{Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_diamond___tic___tac___toe___board_a8edee1ae1506082d8bc312c26bdb25d7} 
+bool Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the player has lost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false (not used in this game variant) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_diamond___tic___tac___toe___board_a028f5e087511cf143941e3ffb7310c59}\index{Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_diamond___tic___tac___toe___board_a028f5e087511cf143941e3ffb7310c59} 
+bool Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the player has won by getting 4 in a row. 
+
+Searches the entire board for any sequence of 4 matching symbols in horizontal, vertical, or diagonal directions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if player has 4 marks in a row, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_diamond___tic___tac___toe___board_ab08b7d8c62600f97f3527fcd2fa66edc}\index{Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Diamond\_Tic\_Tac\_Toe\_Board@{Diamond\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_diamond___tic___tac___toe___board_ab08b7d8c62600f97f3527fcd2fa66edc} 
+bool Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the board with a player\textquotesingle{}s move. 
+
+Validates that the move is within bounds, inside the diamond shape, and the target cell is empty before applying the move.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move} object containing position (x,y) and symbol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move is valid and applied successfully, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_diamond___tic___tac___toe_8h}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp\end{DoxyCompactItemize}

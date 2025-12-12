@@ -1,0 +1,150 @@
+\doxysection{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI Class Reference}
+\hypertarget{class_misere___tic___tac___toe___u_i}{}\label{class_misere___tic___tac___toe___u_i}\index{Misere\_Tic\_Tac\_Toe\_UI@{Misere\_Tic\_Tac\_Toe\_UI}}
+
+
+User interface for Misère Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_misere___tic___tac___toe___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_misere___tic___tac___toe___u_i_a5e4280d571c36f99830c0184ac3ff4f4}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs \doxylink{class_u_i}{UI} with game title. \end{DoxyCompactList}\item 
+\Hypertarget{class_misere___tic___tac___toe___u_i_aee4807aa5b52e2a37b4e12ba502a9335}\label{class_misere___tic___tac___toe___u_i_aee4807aa5b52e2a37b4e12ba502a9335} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_misere___tic___tac___toe___u_i_ac79b0792cb9c8b62efe244232f82a141}{create\+\_\+player}} (string \&name, char symbol, Player\+Type type)
+\begin{DoxyCompactList}\small\item\em Creates a player of specified type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_misere___tic___tac___toe___u_i_a13c2f356fe79f87ed9bce9ca4efadb68}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Gets a move from a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries UI} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual void {\bfseries display\+\_\+message} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries get\+\_\+player\+\_\+name} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual Player\+Type {\bfseries get\+\_\+player\+\_\+type\+\_\+choice} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries cell\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User interface for Misère Tic-\/\+Tac-\/\+Toe. 
+
+Provides player setup and move input functionality with proper display of the reversed-\/objective rules.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_misere___tic___tac___toe___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_misere___tic___tac___toe___u_i_a5e4280d571c36f99830c0184ac3ff4f4}\index{Misere\_Tic\_Tac\_Toe\_UI@{Misere\_Tic\_Tac\_Toe\_UI}!Misere\_Tic\_Tac\_Toe\_UI@{Misere\_Tic\_Tac\_Toe\_UI}}
+\index{Misere\_Tic\_Tac\_Toe\_UI@{Misere\_Tic\_Tac\_Toe\_UI}!Misere\_Tic\_Tac\_Toe\_UI@{Misere\_Tic\_Tac\_Toe\_UI}}
+\doxysubsubsection{\texorpdfstring{Misere\_Tic\_Tac\_Toe\_UI()}{Misere\_Tic\_Tac\_Toe\_UI()}}
+{\footnotesize\ttfamily \label{class_misere___tic___tac___toe___u_i_a5e4280d571c36f99830c0184ac3ff4f4} 
+Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+::\+Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs \doxylink{class_u_i}{UI} with game title. 
+
+Displays "{}\+FCAI Misere Tic Tac Toe Game by Dr El-\/\+Ramly"{}. 
+
+\label{doc-func-members}
+\Hypertarget{class_misere___tic___tac___toe___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_misere___tic___tac___toe___u_i_ac79b0792cb9c8b62efe244232f82a141}\index{Misere\_Tic\_Tac\_Toe\_UI@{Misere\_Tic\_Tac\_Toe\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Misere\_Tic\_Tac\_Toe\_UI@{Misere\_Tic\_Tac\_Toe\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_misere___tic___tac___toe___u_i_ac79b0792cb9c8b62efe244232f82a141} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{Player\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a player of specified type. 
+
+Displays creation message showing player type and symbol.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player} symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+{\em type} & \doxylink{class_player}{Player} type (HUMAN or COMPUTER) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new \doxylink{class_player}{Player} object 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{UI$<$ char $>$}}.
+
+\Hypertarget{class_misere___tic___tac___toe___u_i_a13c2f356fe79f87ed9bce9ca4efadb68}\index{Misere\_Tic\_Tac\_Toe\_UI@{Misere\_Tic\_Tac\_Toe\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Misere\_Tic\_Tac\_Toe\_UI@{Misere\_Tic\_Tac\_Toe\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_misere___tic___tac___toe___u_i_a13c2f356fe79f87ed9bce9ca4efadb68} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets a move from a player. 
+
+For human players\+:
+\begin{DoxyItemize}
+\item Prompts "{}enter x and y (0 to 2)"{}
+\item Reads row and column input
+\end{DoxyItemize}
+
+For computer players\+:
+\begin{DoxyItemize}
+\item Randomly selects position within bounds
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player making move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move} object with position and symbol 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_misere___tic___tac___toe_8h}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['_7eboard_0',['~Board',['../class_board.html#a138a6378af669dd1ce55dc11217aea48',1,'Board']]],
-  ['_7exo_5fui_1',['~XO_UI',['../class_x_o___u_i.html#a6c58a77a2fa80f73e7076ca4a94fcc8a',1,'XO_UI']]]
+  ['player_0',['Player',['../class_player.html',1,'Player&lt; T &gt;'],['../class_player.html#adb4e803a7ac0356b111b8ca79d766976',1,'Player::Player()']]],
+  ['player_3c_20char_20_3e_1',['Player&lt; char &gt;',['../class_player.html',1,'']]]
 ];

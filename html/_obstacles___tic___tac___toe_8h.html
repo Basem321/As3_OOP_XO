@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: XO_Demo.cpp File Reference</title>
+<title>My Project: Obstacles_Tic_Tac_Toe.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('_x_o___demo_8cpp.html','',''); });
+$(function(){initNavTree('_obstacles___tic___tac___toe_8h.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -88,56 +88,35 @@ $(function(){initNavTree('_x_o___demo_8cpp.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">XO_Demo.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">Obstacles_Tic_Tac_Toe.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Entry point for the FCAI X-O (Tic-Tac-Toe) game.  
+<p>Defines classes for Obstacles Tic-Tac-Toe game variant.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
 <code>#include &quot;BoardGame_Classes.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="_x_o___classes_8h_source.html">XO_Classes.h</a>&quot;</code><br />
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function to run the X-O game.  <br /></td></tr>
+</div>
+<p><a href="_obstacles___tic___tac___toe_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:Obstacles_5FTic_5FTac_5FToe_5FBoard" id="r_Obstacles_5FTic_5FTac_5FToe_5FBoard"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obstacles___tic___tac___toe___board.html">Obstacles_Tic_Tac_Toe_Board</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a 6×6 board with dynamic obstacle placement.  <a href="class_obstacles___tic___tac___toe___board.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Obstacles_5FTic_5FTac_5FToe_5FUI" id="r_Obstacles_5FTic_5FTac_5FToe_5FUI"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obstacles___tic___tac___toe___u_i.html">Obstacles_Tic_Tac_Toe_UI</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User interface for Obstacles Tic-Tac-Toe.  <a href="class_obstacles___tic___tac___toe___u_i.html#details">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Entry point for the FCAI X-O (Tic-Tac-Toe) game. </p>
-<p>This file initializes the X-O game by creating the user interface, board, and players. It then launches the game loop via the <a class="el" href="class_game_manager.html" title="Controls the flow of a board game between two players.">GameManager</a> class. All dynamically allocated objects are properly deleted at the end. </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Main function to run the X-O game. </p>
-<p>This function orchestrates the game by:</p><ul>
-<li>Initializing the random number generator</li>
-<li>Creating the X-O specific <a class="el" href="class_u_i.html" title="Base class for handling user interface and input/output.">UI</a> and board</li>
-<li>Setting up players using the <a class="el" href="class_u_i.html" title="Base class for handling user interface and input/output.">UI</a></li>
-<li>Running the main game loop through the <a class="el" href="class_game_manager.html" title="Controls the flow of a board game between two players.">GameManager</a></li>
-<li>Performing cleanup of dynamically allocated memory</li>
-</ul>
-<dl class="section return"><dt>Returns</dt><dd>int Returns 0 on successful execution. </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="textblock"><p>Defines classes for Obstacles Tic-Tac-Toe game variant. </p>
+<p>This file implements a challenging Tic-Tac-Toe variant on a 6×6 board where random obstacles are added after every 2 moves, and players must connect 4 pieces in a row to win. The dynamic obstacles create an unpredictable and strategic gameplay experience.</p>
+<dl class="section author"><dt>Author</dt><dd><a class="el" href="class_board.html" title="Base template for any board used in board games.">Board</a> Game Team </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024 </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -150,7 +129,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="_x_o___demo_8cpp.html">XO_Demo.cpp</a></li>
+    <li class="navelem"><a href="_obstacles___tic___tac___toe_8h.html">Obstacles_Tic_Tac_Toe.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

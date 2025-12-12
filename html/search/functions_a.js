@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['x_5fo_5fboard_0',['X_O_Board',['../class_x___o___board.html#aff75cefd426f1e8db38555ed9b59fee8',1,'X_O_Board']]],
-  ['xo_5fui_1',['XO_UI',['../class_x_o___u_i.html#a3777235b2b66dc912258a4ee20501ebb',1,'XO_UI']]]
+  ['obstacles_5ftic_5ftac_5ftoe_5fboard_0',['Obstacles_Tic_Tac_Toe_Board',['../class_obstacles___tic___tac___toe___board.html#aa552566ef5e1e97d726629279bcb0eca',1,'Obstacles_Tic_Tac_Toe_Board']]],
+  ['obstacles_5ftic_5ftac_5ftoe_5fui_1',['Obstacles_Tic_Tac_Toe_UI',['../class_obstacles___tic___tac___toe___u_i.html#a3a53109f7aa7ae39cb189aee661a9610',1,'Obstacles_Tic_Tac_Toe_UI']]]
 ];

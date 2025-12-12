@@ -1,17 +1,12 @@
 var searchData=
 [
-  ['game_5fis_5fover_0',['game_is_over',['../class_board.html#ae0e4575ec3cc4b6eb9f367ffb2beed13',1,'Board::game_is_over()'],['../class_x___o___board.html#aaee6e3efcbd685d9792d6d81356bba45',1,'X_O_Board::game_is_over()']]],
-  ['gamemanager_1',['GameManager',['../class_game_manager.html',1,'GameManager&lt; T &gt;'],['../class_game_manager.html#addaf3682d9783bdc432a8e3273b5b92c',1,'GameManager::GameManager()']]],
-  ['get_5fboard_5fmatrix_2',['get_board_matrix',['../class_board.html#a117f2e61fdb7deccca333bbbc9c62d3a',1,'Board']]],
-  ['get_5fboard_5fptr_3',['get_board_ptr',['../class_player.html#a508617eddfae8915d098102d480fc888',1,'Player']]],
-  ['get_5fcolumns_4',['get_columns',['../class_board.html#ac665e1ed1f49125fab248e2c9ddfd608',1,'Board']]],
-  ['get_5fmove_5',['get_move',['../class_u_i.html#a8befa259c38c57e6ae2e8ed81c476337',1,'UI::get_move()'],['../class_x_o___u_i.html#a4814913b14a2666667a2a90ab8205356',1,'XO_UI::get_move()']]],
-  ['get_5fname_6',['get_name',['../class_player.html#aed2af19790ba73190e3ebeea589518e1',1,'Player']]],
-  ['get_5fplayer_5fname_7',['get_player_name',['../class_u_i.html#a8617bbf64a9ddf11ea6231912044805d',1,'UI']]],
-  ['get_5fplayer_5ftype_5fchoice_8',['get_player_type_choice',['../class_u_i.html#ae62d61367ea51a5d7532db3b830c6445',1,'UI']]],
-  ['get_5frows_9',['get_rows',['../class_board.html#a93b130eff67bd4476fab27be8341cb78',1,'Board']]],
-  ['get_5fsymbol_10',['get_symbol',['../class_move.html#a595bf740852c05a1cb425ef2640fd4ff',1,'Move::get_symbol()'],['../class_player.html#af56f0bf98c0423a3a75b0848607d03a4',1,'Player::get_symbol() const']]],
-  ['get_5ftype_11',['get_type',['../class_player.html#a2df3bd299bf7aecfa2275ec6902a60f8',1,'Player']]],
-  ['get_5fx_12',['get_x',['../class_move.html#a9d4f543a81e361f872d37bcfb64d5b55',1,'Move']]],
-  ['get_5fy_13',['get_y',['../class_move.html#a96469802a55c9083a1e93c7edec8a00c',1,'Move']]]
+  ['dependencies_0',['Dependencies',['../index.html#deps_sec',1,'']]],
+  ['diamond_5fai_5fplayer_1',['Diamond_AI_Player',['../class_diamond___a_i___player.html',1,'Diamond_AI_Player'],['../class_diamond___a_i___player.html#ab4962072f45b229fe51c68c269511ba2',1,'Diamond_AI_Player::Diamond_AI_Player()']]],
+  ['diamond_5ftic_5ftac_5ftoe_2eh_2',['Diamond_Tic_Tac_Toe.h',['../_diamond___tic___tac___toe_8h.html',1,'']]],
+  ['diamond_5ftic_5ftac_5ftoe_5fboard_3',['Diamond_Tic_Tac_Toe_Board',['../class_diamond___tic___tac___toe___board.html',1,'Diamond_Tic_Tac_Toe_Board'],['../class_diamond___tic___tac___toe___board.html#a2975d3c6eab6fb24a94bb4be6023af57',1,'Diamond_Tic_Tac_Toe_Board::Diamond_Tic_Tac_Toe_Board()']]],
+  ['diamond_5ftic_5ftac_5ftoe_5fui_4',['Diamond_Tic_Tac_Toe_UI',['../class_diamond___tic___tac___toe___u_i.html',1,'Diamond_Tic_Tac_Toe_UI'],['../class_diamond___tic___tac___toe___u_i.html#ae3d9da68f3b5e8acddc4896d043ca2c4',1,'Diamond_Tic_Tac_Toe_UI::Diamond_Tic_Tac_Toe_UI()']]],
+  ['display_5fboard_5fmatrix_5',['display_board_matrix',['../class_u_i.html#aa3775124efaeac59935ae0afb354708d',1,'UI::display_board_matrix()'],['../class_diamond___tic___tac___toe___u_i.html#ae9c9e6130395ff2ac54e74ac89e60ba8',1,'Diamond_Tic_Tac_Toe_UI::display_board_matrix()'],['../class_memory_t_t_t___u_i.html#ad25976331723a61018366d4f48a1927d',1,'MemoryTTT_UI::display_board_matrix()']]],
+  ['display_5fmain_5fboard_6',['display_main_board',['../class_ultimate_tic_tac_toe___u_i.html#a1defbf5b9014ba7342ee06bee168b584',1,'UltimateTicTacToe_UI']]],
+  ['display_5fmessage_7',['display_message',['../class_u_i.html#aaad19c26b8e4c49ba7ada54abd83e23c',1,'UI']]],
+  ['display_5fmini_5fboard_8',['display_mini_board',['../class_ultimate_tic_tac_toe___u_i.html#a77cf1fbe0ae49cd2b1d071cb75f72d5b',1,'UltimateTicTacToe_UI']]]
 ];

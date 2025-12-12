@@ -1,0 +1,242 @@
+\doxysection{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board Class Reference}
+\hypertarget{class_misere___tic___tac___toe___board}{}\label{class_misere___tic___tac___toe___board}\index{Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}}
+
+
+Represents a Misère Tic-\/\+Tac-\/\+Toe board with reversed win condition.  
+
+
+
+
+{\ttfamily \#include $<$Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_misere___tic___tac___toe___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_misere___tic___tac___toe___board_a5c07ed4904188a1d052790a62c05c1f5}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a 3×3 Misère board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_misere___tic___tac___toe___board_a474a1857ccfca5fa2588ec90bf26e045}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Updates board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_misere___tic___tac___toe___board_aa875d0b9e0937d1194bdf3e7248f9480}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if player has WON (survived without 3-\/in-\/a-\/row). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_misere___tic___tac___toe___board_a5e7ad51e6873a54f387664a8f42aa43b}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if player has LOST (made three-\/in-\/a-\/row). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_misere___tic___tac___toe___board_ac82077a63b5fc3f546e08d95267c55fe}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if game is a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_misere___tic___tac___toe___board_ac0da2c7e385c2b6f1e25e227e3094882}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if game has ended. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+n\+\_\+moves} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a Misère Tic-\/\+Tac-\/\+Toe board with reversed win condition. 
+
+A standard 3×3 Tic-\/\+Tac-\/\+Toe board where getting three in a row means you LOSE rather than win. This creates a strategic game where players must balance offense and defense differently than traditional Tic-\/\+Tac-\/\+Toe.
+
+Game rules\+:
+\begin{DoxyItemize}
+\item 3×3 grid
+\item Getting 3 in a row = you LOSE
+\item Filling the board without 3 in a row = you WIN
+\item No draws (if board fills, whoever didn\textquotesingle{}t make 3-\/in-\/a-\/row wins)
+\end{DoxyItemize}
+
+Win/\+Lose logic\+:
+\begin{DoxyItemize}
+\item \doxylink{class_misere___tic___tac___toe___board_a5e7ad51e6873a54f387664a8f42aa43b}{is\+\_\+lose()}\+: Returns true if player made 3-\/in-\/a-\/row (they lose)
+\item \doxylink{class_misere___tic___tac___toe___board_aa875d0b9e0937d1194bdf3e7248f9480}{is\+\_\+win()}\+: Returns true if board full and player didn\textquotesingle{}t make 3-\/in-\/a-\/row
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_misere___tic___tac___toe___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_misere___tic___tac___toe___board_a5c07ed4904188a1d052790a62c05c1f5}\index{Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}!Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}}
+\index{Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}!Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{Misere\_Tic\_Tac\_Toe\_Board()}{Misere\_Tic\_Tac\_Toe\_Board()}}
+{\footnotesize\ttfamily \label{class_misere___tic___tac___toe___board_a5c07ed4904188a1d052790a62c05c1f5} 
+Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::\+Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a 3×3 Misère board. 
+
+Initializes all cells with blank symbol. 
+
+\label{doc-func-members}
+\Hypertarget{class_misere___tic___tac___toe___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_misere___tic___tac___toe___board_ac0da2c7e385c2b6f1e25e227e3094882}\index{Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_misere___tic___tac___toe___board_ac0da2c7e385c2b6f1e25e227e3094882} 
+bool Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if game has ended. 
+
+Game ends when\+:
+\begin{DoxyItemize}
+\item A player loses (makes 3-\/in-\/a-\/row), OR
+\item A player wins (board full without making 3-\/in-\/a-\/row)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if game over, false if game continues 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_misere___tic___tac___toe___board_ac82077a63b5fc3f546e08d95267c55fe}\index{Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_misere___tic___tac___toe___board_ac82077a63b5fc3f546e08d95267c55fe} 
+bool Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if game is a draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false (no draws in Misère variant) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_misere___tic___tac___toe___board_a5e7ad51e6873a54f387664a8f42aa43b}\index{Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_misere___tic___tac___toe___board_a5e7ad51e6873a54f387664a8f42aa43b} 
+bool Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if player has LOST (made three-\/in-\/a-\/row). 
+
+\doxylink{class_player}{Player} loses immediately if they create three matching symbols in\+:
+\begin{DoxyItemize}
+\item Any row (horizontal)
+\item Any column (vertical)
+\item Either diagonal
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if player created 3-\/in-\/a-\/row (loses), false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_misere___tic___tac___toe___board_aa875d0b9e0937d1194bdf3e7248f9480}\index{Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_misere___tic___tac___toe___board_aa875d0b9e0937d1194bdf3e7248f9480} 
+bool Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if player has WON (survived without 3-\/in-\/a-\/row). 
+
+\doxylink{class_player}{Player} wins if\+:
+\begin{DoxyItemize}
+\item \doxylink{class_board}{Board} is completely filled (9 moves), AND
+\item \doxylink{class_player}{Player} did NOT create three-\/in-\/a-\/row
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if board full and player avoided 3-\/in-\/a-\/row, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_misere___tic___tac___toe___board_a474a1857ccfca5fa2588ec90bf26e045}\index{Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Misere\_Tic\_Tac\_Toe\_Board@{Misere\_Tic\_Tac\_Toe\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_misere___tic___tac___toe___board_a474a1857ccfca5fa2588ec90bf26e045} 
+bool Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates board with a player\textquotesingle{}s move. 
+
+Validates position and places piece. Also supports move undo when symbol is 0 (used for AI search/backtracking).
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move} object (symbol=0 for undo) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move valid and applied, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_misere___tic___tac___toe_8h}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ui_0',['UI',['../class_u_i.html#ae50eed41905ca2f8dc103d9bef427fe6',1,'UI']]],
-  ['update_5fboard_1',['update_board',['../class_board.html#a93d9dec601dda58b7e206ccb47633e57',1,'Board::update_board()'],['../class_x___o___board.html#aef2b0da670b2d5dc6333e0e0113f8b3d',1,'X_O_Board::update_board()']]]
+  ['numerical_5fboard_0',['Numerical_Board',['../class_numerical___board.html#a4fb0e1b6e368c8b6a591fb1d95b19077',1,'Numerical_Board']]],
+  ['numerical_5fui_1',['Numerical_UI',['../class_numerical___u_i.html#a2df77448a71627dbeb30f4c1694e5b2d',1,'Numerical_UI']]]
 ];

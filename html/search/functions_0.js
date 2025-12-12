@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['board_0',['Board',['../class_board.html#ae5dfded241ee3644196e2f6074d1d0b1',1,'Board']]]
+  ['add_5frandom_5fobstacles_0',['add_random_obstacles',['../class_obstacles___tic___tac___toe___board.html#acd3aaf863c73f599417ca72c393187d0',1,'Obstacles_Tic_Tac_Toe_Board']]]
 ];

@@ -1,0 +1,91 @@
+\chapter{FCAI Board Game Collection }
+\hypertarget{index}{}\label{index}\index{FCAI Board Game Collection@{FCAI Board Game Collection}}
+\hypertarget{index_intro_sec}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{index_intro_sec}
+Welcome to the FCAI \doxylink{class_board}{Board} Game Collection! This project implements a comprehensive framework for board games, with 12 different Tic-\/\+Tac-\/\+Toe variants and the classic Connect Four game.\hypertarget{index_features_sec}{}\doxysection{\texorpdfstring{Features}{Features}}\label{index_features_sec}
+The collection includes\+:
+\begin{DoxyItemize}
+\item {\bfseries{Template-\/based Game Framework}}\+: Generic classes for boards, players, and moves
+\item {\bfseries{12 Game Variants}}\+: From classic Tic-\/\+Tac-\/\+Toe to complex Ultimate variant
+\item {\bfseries{AI Support}}\+: Computer opponents for all games
+\item {\bfseries{Extensible Design}}\+: Easy to add new game variants
+\item {\bfseries{Clean Architecture}}\+: Separation of game logic, \doxylink{class_u_i}{UI}, and data
+\end{DoxyItemize}\hypertarget{index_games_sec}{}\doxysection{\texorpdfstring{Available Games}{Available Games}}\label{index_games_sec}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{X-\/O Game (Demo)}}\+: Classic 3×3 Tic-\/\+Tac-\/\+Toe
+\item {\bfseries{Four-\/in-\/a-\/\+Row}}\+: Connect Four on 6×7 grid
+\item {\bfseries{SUS Game}}\+: Form "{}\+SUS"{} patterns to score points
+\item {\bfseries{5×5 Tic-\/\+Tac-\/\+Toe}}\+: Count three-\/in-\/a-\/rows on larger board
+\item {\bfseries{Word Tic-\/\+Tac-\/\+Toe}}\+: Place letters to form dictionary words
+\item {\bfseries{Misère Tic-\/\+Tac-\/\+Toe}}\+: Avoid getting three in a row
+\item {\bfseries{Diamond Tic-\/\+Tac-\/\+Toe}}\+: Play on diamond-\/shaped 7×7 board
+\item {\bfseries{Numerical Tic-\/\+Tac-\/\+Toe}}\+: Use numbers to sum to 15
+\item {\bfseries{Obstacles Tic-\/\+Tac-\/\+Toe}}\+: Dynamic obstacles on 6×6 board
+\item {\bfseries{Infinity Tic-\/\+Tac-\/\+Toe}}\+: Only 3 pieces per player at a time
+\item {\bfseries{Ultimate Tic-\/\+Tac-\/\+Toe}}\+: Meta-\/game of 9 boards
+\end{DoxyEnumerate}\hypertarget{index_arch_sec}{}\doxysection{\texorpdfstring{Architecture}{Architecture}}\label{index_arch_sec}
+The project uses a template-\/based inheritance hierarchy\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_board}{Board<T>}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player}{Player<T>}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i}{UI<T>}}}
+\DoxyCodeLine{\ \ \ ↑\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ↑\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ↑}
+\DoxyCodeLine{\ \ \ |\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |}
+\DoxyCodeLine{Specific\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Specific\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Specific}
+\DoxyCodeLine{Game\ Boards\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AI\ Players\ \ \ \ \ \ \ \ \ \ \ \ \ Game\ UIs}
+
+\end{DoxyCode}
+
+
+Key components\+:
+\begin{DoxyItemize}
+\item {\bfseries{\doxylink{class_board}{Board$<$\+T$>$}}}\+: Abstract base for game boards
+\item {\bfseries{\doxylink{class_player}{Player$<$\+T$>$}}}\+: Represents human and computer players
+\item {\bfseries{\doxylink{class_move}{Move$<$\+T$>$}}}\+: Encapsulates a single move
+\item {\bfseries{\doxylink{class_u_i}{UI$<$\+T$>$}}}\+: Handles input/output for games
+\item {\bfseries{\doxylink{class_game_manager}{Game\+Manager$<$\+T$>$}}}\+: Orchestrates game flow
+\end{DoxyItemize}\hypertarget{index_usage_sec}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{index_usage_sec}
+To add a new game variant\+:
+
+
+\begin{DoxyEnumerate}
+\item Create a board class inheriting from \doxylink{class_board}{Board$<$\+T$>$}
+\item Implement required virtual methods (update\+\_\+board, is\+\_\+win, etc.)
+\item Create a \doxylink{class_u_i}{UI} class inheriting from \doxylink{class_u_i}{UI$<$\+T$>$}
+\item Optionally create custom AI player class
+\item Add to main menu
+\end{DoxyEnumerate}
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class\ }MyBoard\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board}{Board}}<char>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{update\_board}}(Move<char>*\ move)\textcolor{keyword}{\ override\ }\{\ ...\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{is\_win}}(Player<char>*\ player)\textcolor{keyword}{\ override\ }\{\ ...\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...\ other\ methods}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class\ }MyUI\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i}{UI}}<char>\ \{}
+\DoxyCodeLine{\ \ \ \ Move<char>*\ \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{get\_move}}(Player<char>*\ player)\textcolor{keyword}{\ override\ }\{\ ...\ \}}
+\DoxyCodeLine{\ \ \ \ Player<char>*\ \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\_player}}(...)\textcolor{keyword}{\ override\ }\{\ ...\ \}}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{index_compile_sec}{}\doxysection{\texorpdfstring{Compilation}{Compilation}}\label{index_compile_sec}
+Requires C++11 or later\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{g++\ -\/std=c++11\ Main\_Menu.cpp\ [other\ files]\ -\/o\ game}
+\DoxyCodeLine{./game}
+
+\end{DoxyCode}
+\hypertarget{index_deps_sec}{}\doxysection{\texorpdfstring{Dependencies}{Dependencies}}\label{index_deps_sec}
+
+\begin{DoxyItemize}
+\item Standard Template Library (STL)
+\item For Word\+Tic\+Tac\+Toe\+: dic.\+txt file with valid 3-\/letter words
+\end{DoxyItemize}\hypertarget{index_authors_sec}{}\doxysection{\texorpdfstring{Authors}{Authors}}\label{index_authors_sec}
+FCAI \doxylink{class_board}{Board} Game Team
+\begin{DoxyItemize}
+\item Dr. El-\/\+Ramly (Framework Design)
+\item Various contributors for game implementations
+\end{DoxyItemize}\hypertarget{index_license_sec}{}\doxysection{\texorpdfstring{License}{License}}\label{index_license_sec}
+Educational use for FCAI courses. 

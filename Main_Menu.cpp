@@ -150,6 +150,8 @@ using namespace std;
  * - 4: Word Tic-Tac-Toe
  * - 5: Misère Tic-Tac-Toe
  * - 6: Diamond Tic-Tac-Toe
+ * - 7: 4x4 Tic-Tac-Toe
+ * - 8: Prymaid Tic-Tac-Toe
  * - 9: Numerical Tic-Tac-Toe
  * - 10: Obstacles Tic-Tac-Toe
  * - 11: Infinity Tic-Tac-Toe

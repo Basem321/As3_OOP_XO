@@ -1,0 +1,196 @@
+\doxysection{Ultimate\+Tic\+Tac\+Toe\+\_\+\+UI Class Reference}
+\hypertarget{class_ultimate_tic_tac_toe___u_i}{}\label{class_ultimate_tic_tac_toe___u_i}\index{UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}}
+
+
+User interface for Ultimate Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Ultimate\+Tic\+Tac\+Toe.\+h$>$}
+
+Inheritance diagram for Ultimate\+Tic\+Tac\+Toe\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ultimate_tic_tac_toe___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ultimate_tic_tac_toe___u_i_a5dcbc77df33da04c615b992c05f9897f}{Ultimate\+Tic\+Tac\+Toe\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs \doxylink{class_u_i}{UI} and displays comprehensive rules. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_ultimate_tic_tac_toe___u_i_a76e484f22919ff2068ecbe5ae91874f4}{create\+\_\+player}} (string \&name, char symbol, Player\+Type type) override
+\begin{DoxyCompactList}\small\item\em Creates a player of specified type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_ultimate_tic_tac_toe___u_i_a4338a56b42da0f2b00ad0d0eb5659a92}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Gets a complete move including board selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ultimate_tic_tac_toe___u_i_a1defbf5b9014ba7342ee06bee168b584}{display\+\_\+main\+\_\+board}} (\mbox{\hyperlink{class_ultimate_tic_tac_toe___board}{Ultimate\+Tic\+Tac\+Toe\+\_\+\+Board}} \texorpdfstring{$\ast$}{*}board)
+\begin{DoxyCompactList}\small\item\em Displays the 3×3 main board state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ultimate_tic_tac_toe___u_i_a77cf1fbe0ae49cd2b1d071cb75f72d5b}{display\+\_\+mini\+\_\+board}} (\mbox{\hyperlink{class_mini_board}{Mini\+Board}} \texorpdfstring{$\ast$}{*}mini\+\_\+board, int board\+\_\+x, int board\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Displays the current mini-\/board being played. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries UI} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual void {\bfseries display\+\_\+message} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries get\+\_\+player\+\_\+name} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual Player\+Type {\bfseries get\+\_\+player\+\_\+type\+\_\+choice} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries cell\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User interface for Ultimate Tic-\/\+Tac-\/\+Toe. 
+
+Provides\+:
+\begin{DoxyItemize}
+\item Game rules explanation
+\item Main board visualization
+\item Mini-\/board visualization
+\item \doxylink{class_board}{Board} selection input
+\item \doxylink{class_move}{Move} input within mini-\/boards
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_ultimate_tic_tac_toe___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ultimate_tic_tac_toe___u_i_a5dcbc77df33da04c615b992c05f9897f}\index{UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}!UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}}
+\index{UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}!UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}}
+\doxysubsubsection{\texorpdfstring{UltimateTicTacToe\_UI()}{UltimateTicTacToe\_UI()}}
+{\footnotesize\ttfamily \label{class_ultimate_tic_tac_toe___u_i_a5dcbc77df33da04c615b992c05f9897f} 
+Ultimate\+Tic\+Tac\+Toe\+\_\+\+UI\+::\+Ultimate\+Tic\+Tac\+Toe\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs \doxylink{class_u_i}{UI} and displays comprehensive rules. 
+
+Explains\+:
+\begin{DoxyItemize}
+\item 9 small boards in 3×3 arrangement
+\item Sub-\/game mechanics
+\item \doxylink{class_board}{Board} selection rules
+\item Win condition 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_ultimate_tic_tac_toe___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ultimate_tic_tac_toe___u_i_a76e484f22919ff2068ecbe5ae91874f4}\index{UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_ultimate_tic_tac_toe___u_i_a76e484f22919ff2068ecbe5ae91874f4} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Ultimate\+Tic\+Tac\+Toe\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{Player\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a player of specified type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player} symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+{\em type} & \doxylink{class_player}{Player} type (HUMAN or COMPUTER) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new \doxylink{class_player}{Player} object 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{UI$<$ char $>$}}.
+
+\Hypertarget{class_ultimate_tic_tac_toe___u_i_a1defbf5b9014ba7342ee06bee168b584}\index{UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}!display\_main\_board@{display\_main\_board}}
+\index{display\_main\_board@{display\_main\_board}!UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}}
+\doxysubsubsection{\texorpdfstring{display\_main\_board()}{display\_main\_board()}}
+{\footnotesize\ttfamily \label{class_ultimate_tic_tac_toe___u_i_a1defbf5b9014ba7342ee06bee168b584} 
+void Ultimate\+Tic\+Tac\+Toe\+\_\+\+UI\+::display\+\_\+main\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ultimate_tic_tac_toe___board}{Ultimate\+Tic\+Tac\+Toe\+\_\+\+Board}} \texorpdfstring{$\ast$}{*}}]{board}{}\end{DoxyParamCaption})}
+
+
+
+Displays the 3×3 main board state. 
+
+Shows which positions are won by X, O, drawn, or still open.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Pointer to \doxylink{class_ultimate_tic_tac_toe___board}{Ultimate\+Tic\+Tac\+Toe\+\_\+\+Board} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ultimate_tic_tac_toe___u_i_a77cf1fbe0ae49cd2b1d071cb75f72d5b}\index{UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}!display\_mini\_board@{display\_mini\_board}}
+\index{display\_mini\_board@{display\_mini\_board}!UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}}
+\doxysubsubsection{\texorpdfstring{display\_mini\_board()}{display\_mini\_board()}}
+{\footnotesize\ttfamily \label{class_ultimate_tic_tac_toe___u_i_a77cf1fbe0ae49cd2b1d071cb75f72d5b} 
+void Ultimate\+Tic\+Tac\+Toe\+\_\+\+UI\+::display\+\_\+mini\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mini_board}{Mini\+Board}} \texorpdfstring{$\ast$}{*}}]{mini\+\_\+board}{, }\item[{int}]{board\+\_\+x}{, }\item[{int}]{board\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+Displays the current mini-\/board being played. 
+
+Shows 3×3 grid with current pieces placed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mini\+\_\+board} & Pointer to \doxylink{class_mini_board}{Mini\+Board} \\
+\hline
+{\em board\+\_\+x} & Main board row of this mini-\/board \\
+\hline
+{\em board\+\_\+y} & Main board column of this mini-\/board \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ultimate_tic_tac_toe___u_i_a4338a56b42da0f2b00ad0d0eb5659a92}\index{UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!UltimateTicTacToe\_UI@{UltimateTicTacToe\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_ultimate_tic_tac_toe___u_i_a4338a56b42da0f2b00ad0d0eb5659a92} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Ultimate\+Tic\+Tac\+Toe\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a complete move including board selection. 
+
+Process\+:
+\begin{DoxyEnumerate}
+\item If no active board, prompt for board selection
+\item Display main board and selected mini-\/board
+\item Prompt for move within mini-\/board
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player making move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move} for mini-\/board position 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ultimate_tic_tac_toe_8h}{Ultimate\+Tic\+Tac\+Toe.\+h}}\item 
+Ultimate\+Tic\+Tac\+Toe.\+cpp\end{DoxyCompactItemize}
