@@ -131,6 +131,7 @@
 #include "UltimateTicTacToe.h"
 #include "Obstacles_Tic_Tac_Toe.h"
 #include "MemoryTTT_Classes.h"
+#include "Tic_Tac_Toe_4x4.h"
 
 using namespace std;
 
@@ -213,6 +214,8 @@ int main() {
     cout << "  4. Play Word Tic-Tac-Toe" << endl;
     cout << "  5. Play Misere Tic Tac Toe" << endl;
     cout << "  6. Play Diamond Tic Tac Toe" << endl;
+    cout << "  7. Play 4x4 Tic-Tac-Toe" << endl;
+    cout << "  8. Play Prmaid Tic-Tac-Toe" << endl;
     cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
     cout << " 10. Play Obstacles Tic-Tac-Toe" << endl;
     cout << " 11. Play Infinity Tic-Tac-Toe" << endl;
@@ -347,7 +350,23 @@ int main() {
         delete players[1];
         delete[] players;
         delete game_ui;
-    }
+	}
+	else if (choice == 7) {
+		cout << "\nStarting 4x4 Tic-Tac-Toe..." << endl;
+
+		UI<char>* game_ui = new Tic_Tac_Toe_4x4_UI();
+		Board<char>* board = new Tic_Tac_Toe_4x4_Board();
+		Player<char>** players = game_ui->setup_players();
+		GameManager<char> game(board, players, game_ui);
+
+		game.run();
+
+		delete board;
+		delete players[0];
+		delete players[1];
+		delete[] players;
+		delete game_ui;
+		}
     else if (choice == 9) {
         cout << "\nLaunching Numerical Tic-Tac-Toe..." << endl;
 
