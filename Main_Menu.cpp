@@ -132,6 +132,9 @@
 #include "Obstacles_Tic_Tac_Toe.h"
 #include "MemoryTTT_Classes.h"
 #include "Tic_Tac_Toe_4x4.h"
+#include "Pyramid_Tic_Tac_Toe.h"
+
+
 
 using namespace std;
 
@@ -217,7 +220,7 @@ int main() {
     cout << "  5. Play Misere Tic Tac Toe" << endl;
     cout << "  6. Play Diamond Tic Tac Toe" << endl;
     cout << "  7. Play 4x4 Tic-Tac-Toe" << endl;
-    cout << "  8. Play Prmaid Tic-Tac-Toe" << endl;
+    cout << "  8. Play pyramid_Tic_Tac_Toe" << endl;
     cout << "  9. Play Numerical Tic-Tac-Toe" << endl;
     cout << " 10. Play Obstacles Tic-Tac-Toe" << endl;
     cout << " 11. Play Infinity Tic-Tac-Toe" << endl;
@@ -357,18 +360,34 @@ int main() {
 		cout << "\nStarting 4x4 Tic-Tac-Toe..." << endl;
 
 		UI<char>* game_ui = new Tic_Tac_Toe_4x4_UI();
-		Board<char>* board = new Tic_Tac_Toe_4x4_Board();
+		Board<char>* Tic_Tac_Toe_4x4_board = new Tic_Tac_Toe_4x4_Board();
 		Player<char>** players = game_ui->setup_players();
-		GameManager<char> game(board, players, game_ui);
+		GameManager<char> Tic_Tac_Toe_4x4_game(Tic_Tac_Toe_4x4_board, players, game_ui);
 
-		game.run();
+        Tic_Tac_Toe_4x4_game.run();
 
-		delete board;
+		delete Tic_Tac_Toe_4x4_board;
 		delete players[0];
 		delete players[1];
 		delete[] players;
 		delete game_ui;
 		}
+    else if (choice == 8) {
+        cout << "\nLets play Pyramid_Tic_Tac_Toe Together..." << endl;
+
+        UI<char>* game_ui = new Pyramid_Tic_Tac_Toe_UI();
+        Board<char>* Pyramid_Tic_Tac_Toe_board = new Pyramid_Tic_Tac_Toe_Board();
+        Player<char>** players = game_ui->setup_players();
+        GameManager<char> Pyramid_Tic_Tac_Toe_game(Pyramid_Tic_Tac_Toe_board, players, game_ui);
+
+        Pyramid_Tic_Tac_Toe_game.run();
+
+        delete Pyramid_Tic_Tac_Toe_board;
+        delete players[0];
+        delete players[1];
+        delete[] players;
+        delete game_ui;
+        }
     else if (choice == 9) {
         cout << "\nLaunching Numerical Tic-Tac-Toe..." << endl;
 
